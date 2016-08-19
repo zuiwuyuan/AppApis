@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick2"
-        android:text="煎蛋-新鲜事详情" />
+        android:text="51妹纸-最新-详情" />
 
 
 </LinearLayout>
