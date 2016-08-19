@@ -156,7 +156,8 @@ public class JuziUtil {
     }
 
     /**
-     * 精选聚集-列表
+     * 精选句集-列表
+     * 最新句集-列表
      *
      * @param url
      */
