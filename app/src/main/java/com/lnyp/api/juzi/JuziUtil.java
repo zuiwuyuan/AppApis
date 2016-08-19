@@ -1,6 +1,7 @@
 package com.lnyp.api.juzi;
 
 import com.apkfuns.logutils.LogUtils;
+import com.google.gson.Gson;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -264,5 +265,53 @@ public class JuziUtil {
             }
         }).start();
 
+    }
+
+    /**
+     * 美图美句、手写美句、经典对白
+     *
+     * @param url
+     */
+    public void getSentenceImgText(final String url) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                System.out.println(url);
+
+                try {
+
+                    Document doc = Jsoup.connect(url).timeout(10000).get();
+
+                    System.out.println(doc);
+
+                    List<SentenceImageText> sentenceImageTexts = new ArrayList<>();
+
+                    Gson gson = new Gson();
+                    Elements views_field_sns_values = doc.getElementsByClass("alljmojusharecon");
+                    for (int i = 0; i < views_field_sns_values.size(); i++) {
+                        Element views_field_sns_value = views_field_sns_values.get(i);
+                        if (views_field_sns_value != null) {
+                            Element bdshare = views_field_sns_value.getElementById("bdshare");
+                            if (bdshare != null) {
+
+                                String data = bdshare.attr("data");
+
+                                if (data != null) {
+                                    SentenceImageText sentenceImageText = gson.fromJson(data, SentenceImageText.class);
+
+                                    if (sentenceImageText != null) {
+                                        sentenceImageTexts.add(sentenceImageText);
+                                    }
+                                    LogUtils.e(sentenceImageText);
+                                }
+                            }
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 }

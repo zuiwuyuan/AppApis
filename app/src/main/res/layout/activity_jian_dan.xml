@@ -10,22 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick1"
-        android:text="煎蛋API" />
-
+        android:text="煎蛋-新鲜事列表" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:onClick="onClick2"
-        android:text="句子迷API" />
+        android:text="煎蛋-新鲜事详情" />
 
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:onClick="onClick3"
-        android:text="51妹子API" />
 
 </LinearLayout>

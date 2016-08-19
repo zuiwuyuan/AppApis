@@ -54,7 +54,7 @@ public class JuziApi {
     // 手写美句
     public static final String MEITUMEIJU_SHOUXIEMEIJU = "http://www.juzimi.com/meitumeiju/shouxiemeiju?page=";
 
-    // 经典对白jingdianduibai
+    // 经典对白
     public static final String MEITUMEIJU_JINGDIANDUIBAI = "http://www.juzimi.com/meitumeiju/jingdianduibai?page=";
 
 }
