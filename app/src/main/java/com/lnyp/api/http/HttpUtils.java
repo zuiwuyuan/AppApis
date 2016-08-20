@@ -96,7 +96,7 @@ public class HttpUtils {
             conn.setRequestMethod("GET");
             conn.setRequestProperty("accept", "*/*");
             conn.setRequestProperty("connection", "Keep-Alive");
-//            conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; U; Android 2.3.3; zh-cn; sdk Build/GRI34) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1 MicroMessenger/6.0.0.57_r870003.501 NetType/internet");
+            conn.setRequestProperty("User-Agent", "Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52");
             if (conn.getResponseCode() == 200) {
                 is = conn.getInputStream();
                 baos = new ByteArrayOutputStream();
@@ -159,7 +159,7 @@ public class HttpUtils {
             conn.setRequestProperty("Content-Type",
                     "application/x-www-form-urlencoded");
             conn.setRequestProperty("charset", "utf-8");
-            //            conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; U; Android 2.3.3; zh-cn; sdk Build/GRI34) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1 MicroMessenger/6.0.0.57_r870003.501 NetType/internet");
+            conn.setRequestProperty("User-Agent", "Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52");
             conn.setUseCaches(false);
             // 发送POST请求必须设置如下两行
             conn.setDoOutput(true);

@@ -5,14 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.apkfuns.logutils.LogUtils;
+import com.lnyp.api.http.HttpUtils;
 import com.lnyp.api.http.JianDanUtil;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import java.io.IOException;
 
 public class JianDanActivity extends AppCompatActivity {
 
@@ -40,7 +39,7 @@ public class JianDanActivity extends AppCompatActivity {
 
         final String url = "http://jandan.net/duan";
 
-       /* HttpUtils.doGetAsyn(url, new HttpUtils.CallBack() {
+        HttpUtils.doGetAsyn(url, new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
                 Document doc = Jsoup.parse(result);
@@ -69,10 +68,10 @@ public class JianDanActivity extends AppCompatActivity {
                 }
 
             }
-        });*/
+        });
 
 
-        new Thread(new Runnable() {
+       /* new Thread(new Runnable() {
             @Override
             public void run() {
 
@@ -108,6 +107,6 @@ public class JianDanActivity extends AppCompatActivity {
                 }
             }
         }).start();
-
+*/
     }
 }
