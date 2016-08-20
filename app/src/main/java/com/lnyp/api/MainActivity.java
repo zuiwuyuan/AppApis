@@ -22,6 +22,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick3(View view) {
-        startActivity(new Intent(this, MeiziActivity.class));
+        startActivity(new Intent(this, ShowImageActivity.class));
     }
 }

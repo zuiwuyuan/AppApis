@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".SentenceActivity" />
         <activity android:name=".JianDanActivity" />
-        <activity android:name=".MeiziActivity"></activity>
+        <activity android:name=".MeiziActivity" />
+        <activity android:name=".ShowImageActivity"></activity>
     </application>
 
 </manifest>
