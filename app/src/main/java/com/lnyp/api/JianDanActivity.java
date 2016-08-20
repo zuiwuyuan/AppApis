@@ -17,12 +17,12 @@ public class JianDanActivity extends AppCompatActivity {
     public void onClick1(View view) {
 
         JianDanUtil jianDanUtil = new JianDanUtil();
-        jianDanUtil.getNewThings("2016/08/19");
+        jianDanUtil.getNewThings("2016/08/20");
     }
 
     public void onClick2(View view) {
 
-        String url = "http://jandan.net/2016/08/16/two-countries-hotel.html";
+        String url = "http://jandan.net/2016/08/20/not-use-google.html";
 
         JianDanUtil jianDanUtil = new JianDanUtil();
         jianDanUtil.getNewThingDetail(url);
