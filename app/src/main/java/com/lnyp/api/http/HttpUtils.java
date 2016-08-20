@@ -106,7 +106,7 @@ public class HttpUtils {
                 }
                 baos.flush();
 
-                System.out.print("str : " + baos.toString());
+//                System.out.print("str : " + baos.toString());
 
                 return baos.toString();
             } else {

@@ -19,4 +19,10 @@
         android:text="煎蛋-新鲜事详情" />
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="onClick3"
+        android:text="煎蛋-段子列表" />
 </LinearLayout>
