@@ -31,7 +31,7 @@ public class MeiziUtil {
 
                 try {
 
-                    Document doc = Jsoup.connect(url).timeout(10000).get();
+                    Document doc = Jsoup.connect(url).timeout(10000).userAgent("Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52").get();
 //                    System.out.println(doc);
 
 
@@ -90,9 +90,109 @@ public class MeiziUtil {
         }).start();
     }
 
+    /**
+     * @param url
+     */
+    public void getMeiZiDetail(final String url) {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                System.out.println(url);
+
+                try {
+
+                    Document doc = Jsoup.connect(url).timeout(10000).userAgent("Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52").get();
+//                    System.out.println(doc);
+
+                    MeiziDetail meiziDetail = new MeiziDetail();
+
+                    Element showImg = doc.getElementById("showImg");
+
+                    if (showImg != null) {
+
+                        Elements liElements = showImg.select("li");
+
+                        if (liElements != null && liElements.size() > 0) {
+
+                            List<MeiziDetail.ImageBean> imageBeans = new ArrayList<>();
+
+                            for (int i = 0; i < liElements.size(); i++) {
+
+                                if (liElements.get(i) != null) {
+
+                                    String detailUrl = liElements.get(i).select("a").attr("href");
+                                    String imgUrl = liElements.get(i).select("img").attr("data-original");
+                                    String width = liElements.get(i).select("img").attr("width");
+                                    String height = liElements.get(i).select("img").attr("height");
+                                    String title = liElements.get(i).select("img").attr("alt");
+
+
+                                    String imgUrlLarge = imgUrl.replaceAll("thumb\\/84x125", "img");
+
+                                    String[] datas = imgUrlLarge.split("img\\/");
+
+                                    if (datas != null && datas.length == 2) {
+
+                                        String new_data = datas[1].replaceAll("\\/", ",");
+
+                                        imgUrlLarge = datas[0] + "img/" + new_data;
+                                    }
+
+
+                                    MeiziDetail.ImageBean imageBean = new MeiziDetail.ImageBean();
+                                    imageBean.setDetailUrl(detailUrl);
+                                    imageBean.setImgUrl(imgUrl);
+                                    imageBean.setImgUrlLarge(imgUrlLarge);
+                                    imageBean.setWidth(width);
+                                    imageBean.setHeight(height);
+                                    imageBean.setTitle(title);
+
+                                    imageBeans.add(imageBean);
+
+                                }
+                            }
+
+                            meiziDetail.setImgBeans(imageBeans);
+                        }
+
+
+                        // 获取标签
+                        List<String> tags = new ArrayList<>();
+
+                        Elements tagscfs = doc.getElementsByTag("ml10");
+                        if (tagscfs != null && tagscfs.size() > 0) {
+                            for (int i = 0; i < tagscfs.size(); i++) {
+
+                                Element tagscf = tagscfs.get(i);
+
+                                String tag = tagscf.text();
+
+                                tags.add(tag);
+                            }
+                            meiziDetail.setTag(tags);
+                        }
+                    }
+
+                    LogUtils.e(meiziDetail.getImgBeans());
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+    }
+
+
+
+
+
 
     /**
      * 妹纸列表
+     * 主要针对于m站的url
      *
      * @param url
      */
@@ -106,7 +206,7 @@ public class MeiziUtil {
 
                 try {
 
-                    Document doc = Jsoup.connect(url).timeout(10000).get();
+                    Document doc = Jsoup.connect(url).timeout(10000).userAgent("Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52").get();
 //                    System.out.println(doc);
 
 
@@ -116,8 +216,6 @@ public class MeiziUtil {
 
                         for (int i = 0; i < liboxs.size(); i++) {
 
-//                            <a href="http://m.51xw.net/meizi/3390.html">
-//                            <img data-original="http://c15.51xw.net/thumb/236x354/3/01536967261359.jpg" src="http://img.51xw.net/static/aitaotu/img/touming.png" alt="[NAKED-ART]NO.005美女套图,[NAKED-ART]NO.005 OL美腳"><span>[NAKED-ART]NO.005美女套图,[NAKED-ART]NO.005 OL美腳</span></a>
                             Element libox = liboxs.get(i);
                             if (libox != null) {
 
@@ -145,6 +243,75 @@ public class MeiziUtil {
                 }
             }
         }).start();
+    }
+
+    /**
+     * 获取妹纸详情
+     * 针对于 M站的
+     *
+     * @param url
+     */
+    public void getMeiZiDetailtMobile(final String url) {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                System.out.println(url);
+
+                try {
+
+                    Document doc = Jsoup.connect(url).timeout(10000).userAgent("Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52").get();
+//                    System.out.println(doc);
+
+                    Elements tagLists = doc.getElementsByClass("tag-list");
+
+                    if (tagLists != null) {
+
+                        List<MeiziDetail> meiziDetails = new ArrayList<>();
+
+                        for (int i = 0; i < tagLists.size(); i++) {
+
+                            MeiziDetail meiziDetail = new MeiziDetail();
+
+                            Element tagList = tagLists.get(i);
+                            if (tagList != null) {
+                                Elements tagElements = tagList.select("a");
+
+                                List<String> tags = new ArrayList<>();
+
+                                for (int j = 0; j < tagElements.size(); j++) {
+                                    String tag = tagElements.get(j).text();
+
+                                    tags.add(tag);
+                                }
+                                meiziDetail.setTag(tags);
+
+                                LogUtils.e(tags);
+                            }
+                        }
+                    }
+
+                    Elements showImgs = doc.getElementsByClass("show-img");
+
+                    if (showImgs != null) {
+
+                        for (int i = 0; i < showImgs.size(); i++) {
+
+                            Element showImg = showImgs.get(i);
+
+                            String imgUrl = showImg.select("img").attr("src");
+
+                            LogUtils.e(imgUrl);
+                        }
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
     }
 
 }

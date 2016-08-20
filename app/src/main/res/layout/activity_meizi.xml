@@ -9,14 +9,27 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick1"
-        android:text="51妹纸-最新-列表" />
+        android:onClick="getMeiZiListByPc"
+        android:text="51妹纸-最新-列表_PC" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick2"
-        android:text="51妹纸-最新-详情" />
+        android:onClick="getMeiZiDetailByPc"
+        android:text="51妹纸-最新-详情_PC" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="getMeiZiListByMobile"
+        android:text="51妹纸-最新-列表_MOBILE" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getMeiZiDetailByMobile"
+        android:text="51妹纸-最新-详情_MOBILE" />
 
 </LinearLayout>

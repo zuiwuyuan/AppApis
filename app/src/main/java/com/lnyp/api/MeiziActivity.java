@@ -18,11 +18,37 @@ public class MeiziActivity extends AppCompatActivity {
         setContentView(R.layout.activity_meizi);
     }
 
-    public void onClick1(View view) {
+    public void getMeiZiListByPc(View view) {
 
         int page = 1;
 
-        final String url = MeizhiApi.MOBILE_MEIZI_HOT + page + MeizhiApi.URL_SUFFIX_MOBILE;
+        final String url = MeizhiApi.MEIZI_WEEK + page + MeizhiApi.URL_SUFFIX_PC;
+
+        MeiziUtil meiziUtil = new MeiziUtil();
+
+        meiziUtil.getMeiZilist(url);
+    }
+
+    public void getMeiZiDetailByPc(View view) {
+
+        final String url = "http://www.51xw.net/meizi/3863.html";
+
+        MeiziUtil meiziUtil = new MeiziUtil();
+        meiziUtil.getMeiZiDetail(url);
+
+    }
+
+
+    public void getMeiZiListByMobile(View view) {
+
+        int page = 1;
+
+        final String url = MeizhiApi.MOBILE_MEIZI_NEW + page + MeizhiApi.URL_SUFFIX;
+//        final String url = MeizhiApi.MOBILE_MEIZI_HOT + page + MeizhiApi.URL_SUFFIX;
+//        final String url = MeizhiApi.MOBILE_MEIZI_BEST + page + MeizhiApi.URL_SUFFIX;
+//        final String url = MeizhiApi.MOBILE_MEIZI_DAY + page + MeizhiApi.URL_SUFFIX;
+//        final String url = MeizhiApi.MOBILE_MEIZI_WEEK + page + MeizhiApi.URL_SUFFIX;
+//        final String url = MeizhiApi.MOBILE_MEIZI_MONTH + page + MeizhiApi.URL_SUFFIX;
 
         MeiziUtil meiziUtil = new MeiziUtil();
 
@@ -30,6 +56,11 @@ public class MeiziActivity extends AppCompatActivity {
 
     }
 
-    public void onClick2(View view) {
+    public void getMeiZiDetailByMobile(View view) {
+
+        final String url = "http://m.51xw.net/meizi/3846.html";
+
+        MeiziUtil meiziUtil = new MeiziUtil();
+        meiziUtil.getMeiZiDetailtMobile(url);
     }
 }
