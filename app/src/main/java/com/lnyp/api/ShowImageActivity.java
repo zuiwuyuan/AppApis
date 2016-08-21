@@ -17,6 +17,6 @@ public class ShowImageActivity extends AppCompatActivity {
 
         imgView = (ShowMaxImageView) findViewById(R.id.imgView);
 
-        Glide.with(this).load("http://data.meitu.xunlei.com/data/image/bailu0809/3.jpg").asBitmap().into(imgView);
+        Glide.with(this).load("http://ww2.sinaimg.cn/large/00625EYFgw1f70kqilkhdj30sg0zk77i.jpg").asBitmap().into(imgView);
     }
 }

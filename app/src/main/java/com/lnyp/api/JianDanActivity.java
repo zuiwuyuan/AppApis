@@ -109,4 +109,19 @@ public class JianDanActivity extends AppCompatActivity {
         }).start();
 */
     }
+
+    public void onClick4(View view) {
+
+        final String url = "http://jandan.net/ooxx";
+
+        HttpUtils.doGetAsyn(url, new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                Document doc = Jsoup.parse(result);
+                System.out.println(doc.toString());
+
+            }
+        });
+
+    }
 }

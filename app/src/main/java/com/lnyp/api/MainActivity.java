@@ -24,4 +24,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClick3(View view) {
         startActivity(new Intent(this, ShowImageActivity.class));
     }
+
+    public void onClick4(View view) {
+        startActivity(new Intent(this, PengfuActivity.class));
+    }
 }
