@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick3(View view) {
-        startActivity(new Intent(this, ShowImageActivity.class));
+        startActivity(new Intent(this, MeiziActivity.class));
     }
 
     public void onClick4(View view) {
