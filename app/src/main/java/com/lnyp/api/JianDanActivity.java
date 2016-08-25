@@ -69,45 +69,6 @@ public class JianDanActivity extends AppCompatActivity {
 
             }
         });
-
-
-       /* new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                try {
-
-                    Document doc = Jsoup.connect(url).timeout(10000).userAgent("Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52").get();
-
-                    Element commentsElement = doc.getElementById("body").getElementById("content").getElementById("comments");
-                    Elements commentlists = commentsElement.select("ol");
-                    if (commentlists != null && commentlists.size() > 0) {
-                        Element commentlist = commentlists.get(0);
-
-                        Elements rows = commentlist.select("li");
-                        LogUtils.e(rows.size());
-                        for (int i = 0; i < rows.size(); i++) {
-
-                            Elements row = rows.select("p");
-                            String text = row.get(i).text().replaceAll(" ", "\n");
-
-                            Elements strong = rows.select("strong");
-                            String author = strong.get(i).text().replaceAll(" ", "\n");
-
-                            Elements small = rows.select("small");
-                            String lastUpdateTime = small.get(i).text().replaceAll("@", "");
-
-                            LogUtils.e(author + "   " + lastUpdateTime + "   " + text);
-                        }
-
-                    }
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-*/
     }
 
     public void onClick4(View view) {
@@ -118,10 +79,83 @@ public class JianDanActivity extends AppCompatActivity {
             @Override
             public void onRequestComplete(String result) {
                 Document doc = Jsoup.parse(result);
-                System.out.println(doc.toString());
+//                System.out.println(doc.toString());
+                Element commentsElement = doc.getElementById("body").getElementById("content").getElementById("comments");
+                Elements commentlists = commentsElement.select("ol");
+                if (commentlists != null && commentlists.size() > 0) {
+                    Element commentlist = commentlists.get(0);
 
+                    Elements rows = commentlist.select("li");
+                    LogUtils.e(rows.size());
+
+                    for (int i = 0; i < rows.size(); i++) {
+
+                        Elements strong = rows.get(i).select("strong");
+                        String author = null;
+                        if (strong != null && strong.size() > 0) {
+                            author = strong.get(0).text().replaceAll(" ", "\n");
+                        }
+
+                        Elements small = rows.get(i).select("small");
+                        String lastUpdateTime = null;
+                        if (small != null && small.size() > 0) {
+                            lastUpdateTime = small.get(0).text().replaceAll("@", "");
+                        }
+                        LogUtils.e(author + "   " + lastUpdateTime);
+
+                        Elements textElemnents = rows.get(i).getElementsByClass("text");
+                        if (textElemnents != null && textElemnents.size() > 0 && textElemnents.get(0) != null) {
+                            Element textElement = textElemnents.get(0);
+
+                            Elements pElemnents = textElement.select("p");
+                            if (pElemnents != null && pElemnents.size() > 0) {
+                                for (int j = 0; j < pElemnents.size(); j++) {
+                                    String href = pElemnents.get(j).select("a").get(0).attr("href");
+                                    LogUtils.e("href : " + href);
+                                }
+                            }
+                        }
+                    }
+
+                }
             }
         });
 
+    }
+
+    public void onClick5(View view) {
+
+        final String url = "http://jandan.net/pic/page-1712";
+
+        HttpUtils.doGetAsyn(url, new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                Document doc = Jsoup.parse(result);
+                System.out.println(doc.toString());
+
+                Element commentsElement = doc.getElementById("body").getElementById("content").getElementById("comments");
+                Elements commentlists = commentsElement.select("ol");
+                if (commentlists != null && commentlists.size() > 0) {
+                    Element commentlist = commentlists.get(0);
+
+                    Elements rows = commentlist.select("li");
+                    LogUtils.e(rows.size());
+//                    for (int i = 0; i < rows.size(); i++) {
+//
+//                        Elements row = rows.select("p");
+//                        String text = row.get(i).text().replaceAll(" ", "\n");
+//
+//                        Elements strong = rows.select("strong");
+//                        String author = strong.get(i).text().replaceAll(" ", "\n");
+//
+//                        Elements small = rows.select("small");
+//                        String lastUpdateTime = small.get(i).text().replaceAll("@", "");
+//
+//                        LogUtils.e(author + "   " + lastUpdateTime + "   " + text);
+//                    }
+
+                }
+            }
+        });
     }
 }

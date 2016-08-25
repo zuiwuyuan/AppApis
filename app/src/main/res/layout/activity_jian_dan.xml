@@ -33,4 +33,11 @@
         android:onClick="onClick4"
         android:text="煎蛋-妹子列表" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="onClick5"
+        android:text="煎蛋-无聊图列表" />
+
 </LinearLayout>
