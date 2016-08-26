@@ -3,7 +3,7 @@ package com.lnyp.api.jiandan;
 /**
  * 煎蛋-新鲜事列表
  */
-public class JianDanDetail {
+public class FreshNewsDetail {
 
     // 1. 图
     // 2. 文
@@ -50,7 +50,7 @@ public class JianDanDetail {
 
     @Override
     public String toString() {
-        return "JianDanDetail{" +
+        return "FreshNewsDetail{" +
                 "type=" + type +
                 ", desc='" + desc + '\'' +
                 ", imgSmall='" + imgSmall + '\'' +

@@ -1,13 +1,10 @@
 package com.lnyp.api.jiandan;
 
-import java.util.List;
-
 /**
- * 无聊图
+ * 妹子图
  */
-public class JianDanQutuBean {
-
+public class DuanziBean {
     public String author;
     public String lastUpdateTime;
-    public List<String> imgs;
+    public String content;
 }

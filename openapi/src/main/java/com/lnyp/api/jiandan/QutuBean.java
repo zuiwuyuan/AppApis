@@ -3,9 +3,10 @@ package com.lnyp.api.jiandan;
 import java.util.List;
 
 /**
- * 妹子图
+ * 无聊图
  */
-public class JianDanMeizhiBean {
+public class QutuBean {
+
     public String author;
     public String lastUpdateTime;
     public List<String> imgs;

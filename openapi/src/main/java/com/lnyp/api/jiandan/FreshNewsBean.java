@@ -3,7 +3,7 @@ package com.lnyp.api.jiandan;
 /**
  * 煎蛋-新鲜事列表
  */
-public class JianDanSimple {
+public class FreshNewsBean {
 
     private String title;
 
@@ -47,7 +47,7 @@ public class JianDanSimple {
 
     @Override
     public String toString() {
-        return "JianDanSimple{" +
+        return "FreshNewsBean{" +
                 "title='" + title + '\'' +
                 ", detailUrl='" + detailUrl + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
