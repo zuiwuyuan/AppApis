@@ -85,6 +85,7 @@ public class JianDanUtil {
                     List<JianDanDetail> jianDanDetails = new ArrayList<JianDanDetail>();
 
                     for (int i = 0; i < ps.size(); i++) {
+
                         Elements imgs = ps.get(i).getElementsByTag("img");
 
                         String imgSmall = null;

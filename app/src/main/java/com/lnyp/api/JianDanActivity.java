@@ -31,15 +31,16 @@ public class JianDanActivity extends AppCompatActivity {
     public void onClick1(View view) {
 
         JianDanUtil jianDanUtil = new JianDanUtil();
-        jianDanUtil.getNewThings("2016/08/20");
+        jianDanUtil.getNewThings("2016/08/26");
     }
 
     public void onClick2(View view) {
 
-        String url = "http://jandan.net/2016/08/20/not-use-google.html";
+        String url = "http://jandan.net/2016/08/26/self-powered-robot.html";
 
         JianDanUtil jianDanUtil = new JianDanUtil();
         jianDanUtil.getNewThingDetail(url);
+
     }
 
     public void onClick3(View view) {
@@ -53,6 +54,11 @@ public class JianDanActivity extends AppCompatActivity {
 //                System.out.println(doc.toString());
 
                 Element commentsElement = doc.getElementById("body").getElementById("content").getElementById("comments");
+
+                String current_comment_page = commentsElement.getElementsByClass("current-comment-page").get(0).text();
+                current_comment_page = current_comment_page.substring(1, current_comment_page.length() - 1);
+
+                LogUtils.e(current_comment_page);
 
                 Elements commentlists = commentsElement.select("ol");
                 if (commentlists != null && commentlists.size() > 0) {
