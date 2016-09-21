@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lnyp.api.MainActivity">
+    tools:context=".ui.MainActivity">
 
     <Button
         android:layout_width="match_parent"
@@ -35,5 +35,12 @@
         android:layout_marginTop="50dp"
         android:onClick="onClick4"
         android:text="捧腹网API" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="onClick5"
+        android:text="51贴图API" />
 
 </LinearLayout>

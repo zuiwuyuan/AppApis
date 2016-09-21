@@ -1,9 +1,11 @@
-package com.lnyp.api;
+package com.lnyp.api.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.lnyp.api.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,4 +30,10 @@ public class MainActivity extends AppCompatActivity {
     public void onClick4(View view) {
         startActivity(new Intent(this, PengfuActivity.class));
     }
+
+    public void onClick5(View view) {
+        startActivity(new Intent(this, TieTuActivity.class));
+    }
+
+
 }

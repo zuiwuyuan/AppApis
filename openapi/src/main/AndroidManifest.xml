@@ -10,18 +10,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SentenceActivity" />
-        <activity android:name=".JianDanActivity" />
-        <activity android:name=".MeiziActivity" />
-        <activity android:name=".ShowImageActivity" />
-        <activity android:name=".PengfuActivity"></activity>
+        <activity android:name=".ui.SentenceActivity" />
+        <activity android:name=".ui.JianDanActivity" />
+        <activity android:name=".ui.MeiziActivity" />
+        <activity android:name=".ui.ShowImageActivity" />
+        <activity android:name=".ui.PengfuActivity" />
+        <activity android:name=".ui.TieTuActivity" />
     </application>
 
 </manifest>

@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lnyp.api.ShowImageActivity">
+    tools:context=".ui.ShowImageActivity">
 
-    <com.lnyp.api.ShowMaxImageView
+    <com.lnyp.api.other.ShowMaxImageView
         android:id="@+id/imgView"
         android:layout_width="match_parent"
         android:layout_marginLeft="20dp"

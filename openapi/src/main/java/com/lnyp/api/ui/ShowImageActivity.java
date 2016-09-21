@@ -1,9 +1,11 @@
-package com.lnyp.api;
+package com.lnyp.api.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
+import com.lnyp.api.R;
+import com.lnyp.api.other.ShowMaxImageView;
 
 public class ShowImageActivity extends AppCompatActivity {
 

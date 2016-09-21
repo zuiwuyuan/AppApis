@@ -1,4 +1,4 @@
-package com.lnyp.api;
+package com.lnyp.api.other;
 
 import android.app.Activity;
 

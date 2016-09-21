@@ -1,9 +1,10 @@
-package com.lnyp.api;
+package com.lnyp.api.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.lnyp.api.R;
 import com.lnyp.api.http.HttpUtils;
 import com.lnyp.api.pengfu.JokeApi;
 import com.lnyp.api.pengfu.JokeUtil;

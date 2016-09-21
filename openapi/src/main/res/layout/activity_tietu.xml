@@ -4,29 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.PengfuActivity">
+    tools:context=".ui.MainActivity">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick1"
-        android:text="最新笑话" />
+        android:onClick="getTietuShouye"
+        android:text="51贴图-首页" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick2"
-        android:text="捧腹段子" />
+        android:onClick="getTietuListByType"
+        android:text="51贴图-根据类型查看图片列表" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick3"
-        android:text="捧腹图片" />
+        android:layout_marginTop="10dp"
+        android:onClick="getTietuDetail"
+        android:text="51贴图-根据类型查看图片列表" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick4"
-        android:text="神回复" />
 </LinearLayout>
