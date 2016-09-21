@@ -23,6 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:onClick="getTietuDetail"
-        android:text="51贴图-根据类型查看图片列表" />
+        android:text="51贴图-根据类型查看图片详情" />
 
 </LinearLayout>

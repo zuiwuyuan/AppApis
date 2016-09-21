@@ -8,6 +8,7 @@ import com.apkfuns.logutils.LogUtils;
 import com.lnyp.api.R;
 import com.lnyp.api.tietu.TieTuApi;
 import com.lnyp.api.tietu.TieTuBannerBean;
+import com.lnyp.api.tietu.TieTuDetailBean;
 import com.lnyp.api.tietu.TieTuHomeData;
 import com.lnyp.api.tietu.TieTuHomeListBean;
 import com.lnyp.api.tietu.TieTuListBean;
@@ -225,7 +226,7 @@ public class TieTuActivity extends AppCompatActivity {
     }
 
     public void getTietuDetail(View view) {
-        final String url = TieTuApi.TIETU_DETAIL;
+        final String url = TieTuApi.TIETU_DETAIL2;
 
         new Thread(new Runnable() {
             @Override
@@ -235,30 +236,57 @@ public class TieTuActivity extends AppCompatActivity {
 
                 try {
                     Document doc = Jsoup.connect(url).timeout(10000).get();
-                    System.out.println(doc);
-
-//                    Elements imgtcEles = doc.getElementsByClass("imgtc");
-/*
-                    <div class="show-simg">
-
-                    <p align="center"><img alt="2016唯美个性长发女生图片" src="http://img2.51tietu.net/upload/www.51tietu.net/2016-071822/20160718221327mlu5ssg2cqe.jpg" /></p>
-                    <p align="center">只是我们缺少发现，因为幸福就在我们身边。</p>
-                    <p align="center"><img alt="2016唯美个性长发女生图片(2)" src="http://img2.51tietu.net/upload/www.51tietu.net/2016-071822/20160718221327vssv05cvyis.jpg" /></p>
-                    <p align="center">不要等待，因为你不知道等待需要花费多少的时间。</p>
-                    <p align="center"><img alt="2016唯美个性长发女生图片(3)" src="http://img2.51tietu.net/upload/www.51tietu.net/2016-071822/20160718221327xz4uh4z5gkd.jpg" /></p>
-                    <p align="center">今天是世界对称日，是不是“我爱你”就会“你爱我”伤害最爱自己的人，只不过是仗着他爱你，向来都与勇敢无关。</p>
-                    <p align="center"><img alt="2016唯美个性长发女生图片(4)" src="http://img2.51tietu.net/upload/www.51tietu.net/2016-071822/201607182213271iojnk5yps1.jpg" /></p>
-                    <p align="center">阳光如细碎的金子慵懒的洒遍大地，秋风阵阵吹起湖畔的柳树，也撩拨起深秋的发丝，湖面折射半脸的夕阳，打在你的脸庞，如此好看。谁的故事，又在哪年过去之后，又被演绎，这场爱情，氤氲在微湿的空气里，如果有夕阳能再暖合点，如果过去我能主动点，十年后的我们，是不是又是另一番模样。</p><p align="center"><img alt="2016唯美个性长发女生图片(5)" src="http://img2.51tietu.net/upload/www.51tietu.net/2016-071822/20160718221328ol1pj20eqgw.jpg" /></p>
-                    <p align="center">蘸一缕花香，在月夜下描一副永恒的情长，临摹一段远古的尘烟，至千年韶光的落红断香处，穿越成笔尖美丽的荒芜。于遥远的羌笛唤醒的无限爱意，点燃颊上那一抹桃红柳绿的春幕！把午夜里的心思，摇曳成寂寞的百合，将温情写满星星的眼泪，自此隔守天涯。</p>
-
-                    <p class="content-tag"> <a target="_blank" href="/tag/%E5%A5%B3%E7%94%9F/">女生</a>  <a target="_blank" href="/tag/%E5%94%AF%E7%BE%8E/">唯美</a>  <a target="_blank" href="/tag/%E5%A5%B3%E7%94%9F/">女生</a>  <a target="_blank" href="/tag/%E9%95%BF%E5%8F%91/">长发</a>  <a target="_blank" href="/tag/%E5%A5%B3%E7%94%9F%E5%9B%BE/">女生图</a>  <a target="_blank" href="/tag/%E5%94%AF%E7%BE%8E%E4%B8%AA%E6%80%A7/">唯美个性</a>  <a target="_blank" href="/tag/2016/">2016</a>  &nbsp;</p>
-
-                    </div>
-                    */
+//                    System.out.println(doc);
 
                     Elements contshowEles = doc.getElementsByClass("contshow");
                     if (contshowEles != null && contshowEles.size() > 0) {
-                        Element contentShowEle = contshowEles.get(0);
+                        Element contentShowEle = contshowEles.first();
+
+                        if (contentShowEle != null) {
+                            Elements pEles = contentShowEle.select("p");
+
+                            List<TieTuDetailBean> tieTuDetailBeens = new ArrayList<>();
+
+                            for (int i = 0; i < pEles.size(); i++) {
+
+                                TieTuDetailBean tieTuDetailBean = new TieTuDetailBean();
+
+                                if (i == pEles.size() - 1) {// 最后一个是标签tags
+
+//                                    <p class="content-tag"> <a target="_blank" href="/tag/%E5%B0%81%E5%AF%92%E7%B4%AB/">封寒紫</a>  <a target="_blank" href="/tag/%E6%83%85%E6%84%9F/">情感</a>  &nbsp;</p>
+                                    Element pEle = pEles.get(i);
+                                    Elements aEles = pEle.select("a");
+                                    if (aEles != null) {
+
+                                        for (int j = 0; j < aEles.size(); j++) {
+                                            String tag = aEles.get(j).text();
+                                            LogUtils.e(tag);
+                                        }
+                                    }
+                                } else {
+                                    Element pEle = pEles.get(i);
+                                    if (pEle != null) {
+                                        Elements imgeles = pEle.select("img");
+
+                                        if (imgeles != null && imgeles.size() > 0) {
+                                            Element imgEle = imgeles.first();
+                                            String src = imgEle.attr("src");
+//                                            String alt = imgEle.attr("alt");
+
+                                            tieTuDetailBean.imgUrl = src;
+
+                                        } else {
+
+                                            String text = pEle.text();
+
+                                            tieTuDetailBean.desc = text;
+                                        }
+                                    }
+                                    LogUtils.e(tieTuDetailBean);
+                                    tieTuDetailBeens.add(tieTuDetailBean);
+                                }
+                            }
+                        }
                     }
 
                 } catch (Exception e) {

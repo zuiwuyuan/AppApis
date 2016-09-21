@@ -59,5 +59,7 @@ public class TieTuApi {
 
 
     // 详情
-    public static final String TIETU_DETAIL = "http://m.51tietu.net/tp/42208.html";
+//    public static final String TIETU_DETAIL1 = "http://m.51tietu.net/tp/42208.html";
+    public static final String TIETU_DETAIL2 = "http://m.51tietu.net/weitu/42126.html";
+
 }
