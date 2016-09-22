@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.apkfuns.logutils.LogUtils;
+import com.lnyp.api.tietu.TieTuListBean;
 import com.lnyp.api.ui.ShowActivity;
 
 import org.jsoup.nodes.Document;
@@ -126,4 +127,5 @@ public class JokeUtil {
         }
 
     }
+
 }

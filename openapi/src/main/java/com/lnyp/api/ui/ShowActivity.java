@@ -1,7 +1,10 @@
 package com.lnyp.api.ui;
 
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.lnyp.api.R;
@@ -17,11 +20,19 @@ public class ShowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
-
+        final ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         data = getIntent().getStringExtra("data");
+
+        System.out.println("data" + data);
 
         TextView textData = (TextView) findViewById(R.id.textData);
         textData.setText(data);
 
+        textData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clipboard.setText(data);
+            }
+        });
     }
 }
