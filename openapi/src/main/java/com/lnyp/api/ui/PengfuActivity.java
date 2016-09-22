@@ -34,7 +34,7 @@ public class PengfuActivity extends AppCompatActivity {
 
                 if (doc != null) {
                     JokeUtil jokeUtil = new JokeUtil();
-                    jokeUtil.getNewJokelist(doc);
+                    jokeUtil.getNewJokelist(PengfuActivity.this, doc);
                 }
             }
         });
@@ -55,7 +55,7 @@ public class PengfuActivity extends AppCompatActivity {
 
                 if (doc != null) {
                     JokeUtil jokeUtil = new JokeUtil();
-                    jokeUtil.getNewJokelist(doc);
+                    jokeUtil.getNewJokelist(PengfuActivity.this, doc);
                 }
             }
         });
@@ -76,7 +76,7 @@ public class PengfuActivity extends AppCompatActivity {
 
                 if (doc != null) {
                     JokeUtil jokeUtil = new JokeUtil();
-                    jokeUtil.getNewJokelist(doc);
+                    jokeUtil.getNewJokelist(PengfuActivity.this, doc);
                 }
             }
         });
@@ -95,7 +95,7 @@ public class PengfuActivity extends AppCompatActivity {
                 Document doc = Jsoup.parse(result);
                 if (doc != null) {
                     JokeUtil jokeUtil = new JokeUtil();
-                    jokeUtil.getNewJokelist(doc);
+                    jokeUtil.getNewJokelist(PengfuActivity.this, doc);
                 }
             }
         });

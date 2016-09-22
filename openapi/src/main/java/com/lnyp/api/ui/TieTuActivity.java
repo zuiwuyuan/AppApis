@@ -1,5 +1,6 @@
 package com.lnyp.api.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -145,18 +146,33 @@ public class TieTuActivity extends AppCompatActivity {
                     tieTuHomeData.tpRecommendBeans = tpRecommendBeans;
                     tieTuHomeData.tpMeiwenBeans = tpMeiwenBeans;
 
+                    StringBuffer sb = new StringBuffer();
+
                     for (int i = 0; i < tieTuHomeData.tieTuBannerBeens.size(); i++) {
-                        System.out.println(tieTuHomeData.tieTuBannerBeens.get(i));
+//                        System.out.println(tieTuHomeData.tieTuBannerBeens.get(i));
+                        String data = tieTuHomeData.tieTuBannerBeens.get(i).toString();
+                        sb.append(data).append("\n");
                     }
                     for (int i = 0; i < tieTuHomeData.tpNewBeans.size(); i++) {
-                        System.out.println(tieTuHomeData.tpNewBeans.get(i));
+//                        System.out.println(tieTuHomeData.tpNewBeans.get(i));
+                        String data = tieTuHomeData.tpNewBeans.get(i).toString();
+                        sb.append(data).append("\n");
                     }
                     for (int i = 0; i < tieTuHomeData.tpRecommendBeans.size(); i++) {
-                        System.out.println(tieTuHomeData.tpRecommendBeans.get(i));
+//                        System.out.println(tieTuHomeData.tpRecommendBeans.get(i));
+                        String data = tieTuHomeData.tpRecommendBeans.get(i).toString();
+                        sb.append(data).append("\n");
                     }
                     for (int i = 0; i < tieTuHomeData.tpMeiwenBeans.size(); i++) {
-                        System.out.println(tieTuHomeData.tpMeiwenBeans.get(i));
+//                        System.out.println(tieTuHomeData.tpMeiwenBeans.get(i));
+                        String data = tieTuHomeData.tpMeiwenBeans.get(i).toString();
+                        sb.append(data).append("\n");
                     }
+
+                    Intent intent = new Intent(TieTuActivity.this, ShowActivity.class);
+                    intent.putExtra("data", sb.toString());
+                    startActivity(intent);
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -177,7 +193,6 @@ public class TieTuActivity extends AppCompatActivity {
 
                 try {
                     Document doc = Jsoup.connect(url).timeout(10000).get();
-//                    System.out.println(doc);
 
                     Elements imgtcEles = doc.getElementsByClass("imgtc");
 
@@ -202,7 +217,6 @@ public class TieTuActivity extends AppCompatActivity {
 
                                 tieTuListBean.title = title;
                                 tieTuListBean.detailUrl = href;
-
                             }
 
                             Elements b_imgs = banners.select("img");
@@ -215,6 +229,18 @@ public class TieTuActivity extends AppCompatActivity {
                             LogUtils.e(tieTuListBean);
                             tieTuListBeens.add(tieTuListBean);
                         }
+
+
+                        StringBuffer sb = new StringBuffer();
+                        for (int i = 0; i < tieTuListBeens.size(); i++) {
+                            String data = tieTuListBeens.get(i).toString();
+                            sb.append(data).append("\n");
+                        }
+
+                        Intent intent = new Intent(TieTuActivity.this, ShowActivity.class);
+                        intent.putExtra("data", sb.toString());
+                        startActivity(intent);
+
                     }
 
                 } catch (Exception e) {
@@ -286,6 +312,16 @@ public class TieTuActivity extends AppCompatActivity {
                                     tieTuDetailBeens.add(tieTuDetailBean);
                                 }
                             }
+
+                            StringBuffer sb = new StringBuffer();
+                            for (int i = 0; i < tieTuDetailBeens.size(); i++) {
+                                String data = tieTuDetailBeens.get(i).toString();
+                                sb.append(data).append("\n");
+                            }
+
+                            Intent intent = new Intent(TieTuActivity.this, ShowActivity.class);
+                            intent.putExtra("data", sb.toString());
+                            startActivity(intent);
                         }
                     }
 

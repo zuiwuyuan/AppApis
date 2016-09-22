@@ -10,5 +10,14 @@ public class TieTuListBean {
     public String title;
     public String imgUrl;
     public String detailUrl;
+
+    @Override
+    public String toString() {
+        return "TieTuListBean{" +
+                "title='" + title + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", detailUrl='" + detailUrl + '\'' +
+                '}';
+    }
 }
 

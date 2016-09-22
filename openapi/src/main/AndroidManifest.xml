@@ -23,6 +23,7 @@
         <activity android:name=".ui.ShowImageActivity" />
         <activity android:name=".ui.PengfuActivity" />
         <activity android:name=".ui.TieTuActivity" />
+        <activity android:name=".ui.ShowActivity"></activity>
     </application>
 
 </manifest>

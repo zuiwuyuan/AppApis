@@ -27,7 +27,7 @@ public class MeiziActivity extends AppCompatActivity {
 
         MeiziUtil meiziUtil = new MeiziUtil();
 
-        meiziUtil.getMeiZilist(url);
+        meiziUtil.getMeiZilist(this,url);
     }
 
     public void getMeiZiDetailByPc(View view) {
@@ -35,7 +35,7 @@ public class MeiziActivity extends AppCompatActivity {
         final String url = "http://www.51xw.net/meizi/3863.html";
 
         MeiziUtil meiziUtil = new MeiziUtil();
-        meiziUtil.getMeiZiDetail(url);
+        meiziUtil.getMeiZiDetail(this,url);
 
     }
 
@@ -53,7 +53,7 @@ public class MeiziActivity extends AppCompatActivity {
 
         MeiziUtil meiziUtil = new MeiziUtil();
 
-        meiziUtil.getMeiZilistMobile(url);
+        meiziUtil.getMeiZilistMobile(this,url);
 
     }
 

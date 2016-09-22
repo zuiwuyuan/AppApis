@@ -34,4 +34,13 @@ public class MeiziSimple {
     public void setDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
     }
+
+    @Override
+    public String toString() {
+        return "MeiziSimple{" +
+                "title='" + title + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", detailUrl='" + detailUrl + '\'' +
+                '}';
+    }
 }

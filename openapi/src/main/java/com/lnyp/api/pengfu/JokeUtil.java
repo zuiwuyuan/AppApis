@@ -1,6 +1,10 @@
 package com.lnyp.api.pengfu;
 
+import android.content.Context;
+import android.content.Intent;
+
 import com.apkfuns.logutils.LogUtils;
+import com.lnyp.api.ui.ShowActivity;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -19,7 +23,7 @@ public class JokeUtil {
      *
      * @param doc
      */
-    public void getNewJokelist(Document doc) {
+    public void getNewJokelist(Context mContext, Document doc) {
 
         //class等于list-item的div标签
         Elements list_item_elements = doc.select("div.list-item");
@@ -92,6 +96,7 @@ public class JokeUtil {
                         String tag = clearfixs.get(j) != null ? clearfixs.get(j).text() : "";
                         tags.add(tag);
                     }
+
                     jokeBean.setTags(tags);
                 }
 
@@ -107,6 +112,16 @@ public class JokeUtil {
 //                }
 
             }
+
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < jokeBeanList.size(); i++) {
+                String data = jokeBeanList.get(i).toString();
+                sb.append(data).append("\n");
+            }
+
+            Intent intent = new Intent(mContext, ShowActivity.class);
+            intent.putExtra("data", sb.toString());
+            mContext.startActivity(intent);
 
         }
 

@@ -82,6 +82,25 @@ public class MeiziDetail {
         public void setImgUrlLarge(String imgUrlLarge) {
             this.imgUrlLarge = imgUrlLarge;
         }
+
+        @Override
+        public String toString() {
+            return "ImageBean{" +
+                    "detailUrl='" + detailUrl + '\'' +
+                    ", imgUrl='" + imgUrl + '\'' +
+                    ", imgUrlLarge='" + imgUrlLarge + '\'' +
+                    ", width='" + width + '\'' +
+                    ", height='" + height + '\'' +
+                    ", title='" + title + '\'' +
+                    '}';
+        }
     }
 
+    @Override
+    public String toString() {
+        return "MeiziDetail{" +
+                "tag=" + tag +
+                ", imgBeans=" + imgBeans +
+                '}';
+    }
 }

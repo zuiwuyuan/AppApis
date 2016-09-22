@@ -115,4 +115,14 @@ public class JokeBean {
         }
     }
 
+    @Override
+    public String toString() {
+        return "JokeBean{" +
+                "userName='" + userName + '\'' +
+                ", lastTime='" + lastTime + '\'' +
+                ", userAvatar='" + userAvatar + '\'' +
+                ", tags=" + tags +
+                ", dataBean=" + dataBean +
+                '}';
+    }
 }

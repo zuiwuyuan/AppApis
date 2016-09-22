@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick1"
-        android:text="煎蛋API" />
+        android:text="煎蛋API:http://jandan.net/" />
 
 
     <Button
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="onClick2"
-        android:text="句子迷API" />
+        android:text="句子迷API:http://www.juzimi.com/" />
 
 
     <Button
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="onClick3"
-        android:text="51妹子API" />
+        android:text="51妹子API:http://m.51xw.net/meizi" />
 
 
     <Button
@@ -34,13 +34,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="onClick4"
-        android:text="捧腹网API" />
+        android:text="捧腹网API:http://m.pengfu.com/" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="onClick5"
-        android:text="51贴图API" />
+        android:text="51贴图API:http://m.51tietu.net" />
 
 </LinearLayout>

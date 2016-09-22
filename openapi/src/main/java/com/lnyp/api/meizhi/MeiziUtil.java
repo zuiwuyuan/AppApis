@@ -1,6 +1,10 @@
 package com.lnyp.api.meizhi;
 
+import android.content.Context;
+import android.content.Intent;
+
 import com.apkfuns.logutils.LogUtils;
+import com.lnyp.api.ui.ShowActivity;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -21,7 +25,7 @@ public class MeiziUtil {
      *
      * @param url
      */
-    public void getMeiZilist(final String url) {
+    public void getMeiZilist(Context mContext, final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -93,7 +97,7 @@ public class MeiziUtil {
     /**
      * @param url
      */
-    public void getMeiZiDetail(final String url) {
+    public void getMeiZiDetail(final Context mContext, final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -177,6 +181,11 @@ public class MeiziUtil {
 
                     LogUtils.e(meiziDetail.getImgBeans());
 
+
+                    Intent intent = new Intent(mContext, ShowActivity.class);
+                    intent.putExtra("data", meiziDetail.toString());
+                    mContext.startActivity(intent);
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -186,17 +195,13 @@ public class MeiziUtil {
     }
 
 
-
-
-
-
     /**
      * 妹纸列表
      * 主要针对于m站的url
      *
      * @param url
      */
-    public void getMeiZilistMobile(final String url) {
+    public void getMeiZilistMobile(final Context mContext,final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -232,9 +237,17 @@ public class MeiziUtil {
                                 LogUtils.e(meiziSimple);
                                 meiziSimples.add(meiziSimple);
                             }
-
-
                         }
+
+                        StringBuffer sb = new StringBuffer();
+                        for (int i = 0; i < meiziSimples.size(); i++) {
+                            String data = meiziSimples.get(i).toString();
+                            sb.append(data).append("\n");
+                        }
+
+                        Intent intent = new Intent(mContext, ShowActivity.class);
+                        intent.putExtra("data", sb.toString());
+                        mContext.startActivity(intent);
 
                     }
 
