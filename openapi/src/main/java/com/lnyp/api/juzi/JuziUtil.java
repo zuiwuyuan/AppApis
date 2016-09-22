@@ -124,7 +124,7 @@ public class JuziUtil {
                 try {
 
                     Document doc = Jsoup.connect(url).timeout(10000).get();
-                    System.out.println(doc);
+//                    System.out.println(doc);
 
                     Elements field_contents = doc.getElementsByClass("field-content");
 
@@ -173,7 +173,7 @@ public class JuziUtil {
                 try {
 
                     Document doc = Jsoup.connect(url).timeout(10000).get();
-                    System.out.println(doc);
+//                    System.out.println(doc);
 
                     List<SentenceCollection> sentenceCollections = new ArrayList<>();
 
@@ -283,7 +283,7 @@ public class JuziUtil {
 
                     Document doc = Jsoup.connect(url).timeout(10000).get();
 
-                    System.out.println(doc);
+//                    System.out.println(doc);
 
                     List<SentenceImageText> sentenceImageTexts = new ArrayList<>();
 

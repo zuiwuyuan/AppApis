@@ -181,8 +181,8 @@ public class JianDanUtil {
                         duanziBeanList.add(duanziBean);
 
                         LogUtils.e(duanziBean);
-                    }
 
+                    }
                 }
 
                 duanziDatas.duanziBeanList = duanziBeanList;
