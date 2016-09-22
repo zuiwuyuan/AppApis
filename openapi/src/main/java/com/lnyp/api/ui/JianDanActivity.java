@@ -8,6 +8,9 @@ import com.lnyp.api.R;
 import com.lnyp.api.jiandan.JianDanUtil;
 import com.lnyp.api.jiandan.JiandanApi;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class JianDanActivity extends AppCompatActivity {
 
     @Override
@@ -19,7 +22,12 @@ public class JianDanActivity extends AppCompatActivity {
     public void onClick1(View view) {
 
         JianDanUtil jianDanUtil = new JianDanUtil();
-        jianDanUtil.getNewThings("2016/08/26");
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/mm/dd");
+        Date now = new Date();
+        String date = simpleDateFormat.format(now);
+
+        jianDanUtil.getNewThings(date);
     }
 
     public void onClick2(View view) {
