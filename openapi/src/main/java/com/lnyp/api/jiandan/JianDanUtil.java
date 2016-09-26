@@ -125,7 +125,9 @@ public class JianDanUtil {
 
     }
 
-
+    /**
+     * @param url
+     */
     public void getDuans(final String url) {
 
         HttpUtils.doGetAsyn(url, new HttpUtils.CallBack() {
@@ -184,7 +186,6 @@ public class JianDanUtil {
 
                     }
                 }
-
                 duanziDatas.duanziBeanList = duanziBeanList;
 
             }
@@ -243,11 +244,14 @@ public class JianDanUtil {
                             Elements pElemnents = textElement.select("p");
                             if (pElemnents != null && pElemnents.size() > 0) {
 
-                                List<String> imgs = new ArrayList<String>();
+                                List<String> imgs = new ArrayList<>();
+
                                 for (int j = 0; j < pElemnents.size(); j++) {
-                                    String href = pElemnents.get(j).select("a").get(0).attr("href");
-                                    LogUtils.e("href : " + href);
-                                    imgs.add(href);
+                                    if (pElemnents.get(j).select("a") != null && pElemnents.get(j).select("a").size() > 0) {
+                                        String href = pElemnents.get(j).select("a").get(0).attr("href");
+                                        LogUtils.e("href : " + href);
+                                        imgs.add(href);
+                                    }
                                 }
 
                                 meizhiBean.imgs = imgs;

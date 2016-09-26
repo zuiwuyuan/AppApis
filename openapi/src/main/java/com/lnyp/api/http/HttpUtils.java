@@ -22,7 +22,6 @@ public class HttpUtils {
         void onRequestComplete(String result);
     }
 
-
     /**
      * 异步的Get请求
      *
@@ -42,8 +41,6 @@ public class HttpUtils {
                 }
 
             }
-
-            ;
         }.start();
     }
 
@@ -67,10 +64,7 @@ public class HttpUtils {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
             }
-
-            ;
         }.start();
 
     }
@@ -107,9 +101,7 @@ public class HttpUtils {
                     baos.write(buf, 0, len);
                 }
                 baos.flush();
-
 //                System.out.print("str : " + baos.toString());
-
                 return baos.toString();
             } else {
                 throw new RuntimeException(" responseCode is not 200 ... ");

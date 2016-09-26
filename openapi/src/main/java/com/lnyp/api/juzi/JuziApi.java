@@ -46,7 +46,6 @@ public class JuziApi {
     // 最新句集
     public static final String NEWALBUMS = "http://www.juzimi.com/newalbums?page=";
 
-
     //********************************************************美图美句********************************************************
     // 美图美句
     public static final String MEITUMEIJU = "http://www.juzimi.com/meitumeiju?page=";
