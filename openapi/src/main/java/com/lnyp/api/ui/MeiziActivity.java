@@ -19,7 +19,21 @@ public class MeiziActivity extends AppCompatActivity {
         setContentView(R.layout.activity_meizi);
     }
 
-    public void getMeiZiListByPc(View view) {
+    /**
+     * 获取网页的妹子列表
+     * <p/>
+     * 最新
+     * 最热
+     * 推荐
+     * 日榜
+     * 周榜
+     * 月榜
+     * <p/>
+     * 妹子列表的数据解析方式是一样的，所以通过一种方式就ok
+     *
+     * @param view
+     */
+   public void getMeiZiListByPc(View view) {
 
         int page = 1;
 
@@ -39,12 +53,12 @@ public class MeiziActivity extends AppCompatActivity {
 
     }
 
-
-    public void getMeiZiListByMobile(View view) {
+    /*public void getMeiZiListByMobile(View view) {
 
         int page = 1;
 
         final String url = MeizhiApi.MOBILE_MEIZI_NEW + page + MeizhiApi.URL_SUFFIX;
+
 //        final String url = MeizhiApi.MOBILE_MEIZI_HOT + page + MeizhiApi.URL_SUFFIX;
 //        final String url = MeizhiApi.MOBILE_MEIZI_BEST + page + MeizhiApi.URL_SUFFIX;
 //        final String url = MeizhiApi.MOBILE_MEIZI_DAY + page + MeizhiApi.URL_SUFFIX;
@@ -53,7 +67,7 @@ public class MeiziActivity extends AppCompatActivity {
 
         MeiziUtil meiziUtil = new MeiziUtil();
 
-        meiziUtil.getMeiZilistMobile(this,url);
+        meiziUtil.getMeiZilistMobile(this, url);
 
     }
 
@@ -63,5 +77,5 @@ public class MeiziActivity extends AppCompatActivity {
 
         MeiziUtil meiziUtil = new MeiziUtil();
         meiziUtil.getMeiZiDetailtMobile(url);
-    }
+    }*/
 }

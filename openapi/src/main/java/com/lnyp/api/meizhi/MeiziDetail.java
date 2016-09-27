@@ -28,6 +28,7 @@ public class MeiziDetail {
     }
 
     public static class ImageBean {
+
         private String detailUrl;
         private String imgUrl;
         private String imgUrlLarge;

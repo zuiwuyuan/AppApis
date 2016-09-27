@@ -20,6 +20,11 @@ public class PengfuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pengfu);
     }
 
+    /**
+     * 最新笑话
+     *
+     * @param view
+     */
     public void onClick1(View view) {
 
         int page = 1;
@@ -40,6 +45,10 @@ public class PengfuActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * 捧腹段子
+     * @param view
+     */
     public void onClick2(View view) {
 
         int page = 1;
@@ -62,6 +71,10 @@ public class PengfuActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * 趣图
+     * @param view
+     */
     public void onClick3(View view) {
         int page = 1;
 
@@ -82,6 +95,10 @@ public class PengfuActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * 神回复
+     * @param view
+     */
     public void onClick4(View view) {
 
         int page = 1;

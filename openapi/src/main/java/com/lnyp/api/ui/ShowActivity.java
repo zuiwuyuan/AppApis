@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lnyp.api.R;
 
@@ -20,7 +21,10 @@ public class ShowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
+
         final ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+
+
         data = getIntent().getStringExtra("data");
 
         System.out.println("data" + data);
@@ -31,6 +35,7 @@ public class ShowActivity extends AppCompatActivity {
         textData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(ShowActivity.this, "已复制", Toast.LENGTH_SHORT).show();
                 clipboard.setText(data);
             }
         });

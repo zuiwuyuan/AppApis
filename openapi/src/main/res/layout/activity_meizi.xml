@@ -7,10 +7,11 @@
     tools:context=".ui.MainActivity">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="getMeiZiListByPc"
-        android:text="51妹纸-最新-列表_PC" />
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:onClick="getMeiZiListByPc"
+         android:text="51妹纸-最新-列表_PC" />
+
 
     <Button
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
         android:onClick="getMeiZiDetailByPc"
         android:text="51妹纸-最新-详情_PC" />
 
-    <Button
+ <!--   <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -30,6 +31,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="getMeiZiDetailByMobile"
-        android:text="51妹纸-最新-详情_MOBILE" />
+        android:text="51妹纸-最新-详情_MOBILE" />-->
 
 </LinearLayout>

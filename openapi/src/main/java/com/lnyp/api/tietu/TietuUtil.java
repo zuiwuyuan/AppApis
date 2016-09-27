@@ -129,6 +129,10 @@ public class TietuUtil {
             String data = tieTuHomeData.tieTuBannerBeens.get(i).toString();
             sb.append(data).append("\n");
         }
+        for (int i = 0; i < tieTuHomeData.tpGuanchangBeans.size(); i++) {
+            String data = tieTuHomeData.tpGuanchangBeans.get(i).toString();
+            sb.append(data).append("\n");
+        }
         for (int i = 0; i < tieTuHomeData.tpNewBeans.size(); i++) {
             String data = tieTuHomeData.tpNewBeans.get(i).toString();
             sb.append(data).append("\n");

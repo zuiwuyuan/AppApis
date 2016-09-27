@@ -13,7 +13,7 @@ public class JokeApi {
     // 捧腹段子
     public static final String PENGFU_NEW_XIAOHUA = "http://m.pengfu.com/xiaohua_";
 
-    // 捧腹段子
+    // 趣图
     public static final String PENGFU_NEW_QUTU = "http://m.pengfu.com/qutu_";
 
     // 神回复
