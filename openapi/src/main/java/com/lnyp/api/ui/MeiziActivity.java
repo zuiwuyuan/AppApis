@@ -37,7 +37,7 @@ public class MeiziActivity extends AppCompatActivity {
 
         int page = 1;
 
-        final String url = MeizhiApi.MEIZI_WEEK + page + MeizhiApi.URL_SUFFIX_PC;
+        final String url = MeizhiApi.MEIZI_NEW + page + MeizhiApi.URL_SUFFIX_PC;
 
         MeiziUtil meiziUtil = new MeiziUtil();
 

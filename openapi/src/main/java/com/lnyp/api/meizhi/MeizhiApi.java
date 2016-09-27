@@ -24,7 +24,7 @@ public class MeizhiApi {
     public static final String MEIZI_DAY = "http://www.51xw.net/meizi/day/index_";
 
     // 周榜
-    public static final String MEIZI_WEEK = "http://www.51xw.net/meizi/week/index_";
+//    public static final String MEIZI_WEEK = "http://www.51xw.net/meizi/week/index_";
 
     // 月榜
     public static final String MEIZI_MONTH = "http://www.51xw.net/meizi/month/index_";

@@ -1,13 +1,20 @@
 # AppApis
-解析一些APP的API，如煎蛋APP，51妹子等，可以通过这些Api高仿一些API
+前段时间，写了个做app的实战系列教程，其中一篇章提到了解析网页中的数据为己所用，看到大家的响应还不错，于是把自己以前解析过的网页数据都整理了下，开放出来，给更多的人使用，希望可以帮助大家学习做一些简单的APP。
 
+**着重强调，数据来源于对网页的解析，所以只能拿来学习使用，切莫用作于商业活动！！！**
+**如果数据方（网站）对解析网站数据提出为侵权行为，请联系，会立即删除相关的数据！！！**
 
-通过UserAgent判断智能手机(设备,Android,IOS)
-http://free0007.iteye.com/blog/2017329/
+**请大家能尊重版权，好好学习！！！**
 
-##煎蛋网
+下面一共解析了五个网站的数据，分别是：煎蛋网、句子迷、51妹子、捧腹网、51贴图网。有兴趣拿这些网页数据学习开发的人，可以继续阅读之。。。
 
-###煎蛋网-新鲜事列表
+关于如何解析网页数据，请参考下我之前写的这篇[ Android实战：手把手实现“捧腹网”APP（一）-----捧腹网网页分析、数据获取](http://blog.csdn.net/zuiwuyuan/article/details/52551809), 下面的文章，不在演示如何分析每个网页中的数据了，具体方法，大家可以直接去看源码。下面，我只给出，我分析出来的数据，大家可以看看是不是自己想要的。拿这些数据开发时便可以清晰明确的知道该用哪个了。
+
+##煎蛋网 http://jandan.net/
+其实在github上，已经有一些个高仿煎蛋网的app了，当然，他们也开放出了相关的api接口。有兴趣的人可以直接在github上搜索他们的接口，直接使用。 我这里，使用的方法是解析、分析拿到网页中的数据，自然效率会比直接调用api接口慢，毕竟多了分析网页数据的过程。不过用在学习上，基本上是绰绰有余了。
+
+###煎蛋网-新鲜事列表 http://jandan.net/2016/09/28
+新鲜事列表的url地址的格式为：“http://jandan.net/”+“yyyy/mm/dd”，需要分页的时候，可以直接自己格式化日期，拼接在baseurl后面，如http://jandan.net/2016/09/28，解析出来的数据如下：
 ```
 FreshNewsBean{title='内向的人为什么学习更快', detailUrl='http://i.jandan.net/2016/07/27/introverts-learn-faster.html', imgUrl='http://tankr.net/s/custom/QZDJ.jpg', keyWords='熊猫丹 / 心理学'}
 FreshNewsBean{title='饭来张口：智能喂食机器人', detailUrl='http://i.jandan.net/2016/07/27/obi-robot.html', imgUrl='http://tankr.net/s/custom/FAEI.jpg', keyWords='熊猫丹 / 人工智能'}
@@ -29,6 +36,7 @@ FreshNewsBean{title='无聊图大吐槽【40P】', detailUrl='http://i.jandan.ne
 ```
 
 ###煎蛋网-新鲜事详情
+新鲜事详情的url，可以通过上面的列表获得，也就是我写的detailUrl字段。详情页面的数据，主要由图文组成，分析如下：
 ```
 FreshNewsDetail{type=1, desc='null', imgSmall='//tankr.net/s/small/4E6U.jpg', imgMedium='//tankr.net/s/medium/4E6U.jpg'}
 FreshNewsDetail{type=2, desc='机器人工程师们开始越来越多地从自然中获取设计灵感，比如蟑螂，鳗鱼，蝾螈，蜘蛛和黄貂鱼。', imgSmall='null', imgMedium='null'}
@@ -50,7 +58,7 @@ FreshNewsDetail{type=2, desc='[许叔 via cosmosmagazine]', imgSmall='null', img
 ```
 
 
-###煎蛋网-段子列表
+###煎蛋网-段子列表http://jandan.net/duan
 ```
 DuanziBean{author='ayaoayaoaya', lastUpdateTime='59 mins ago', content='天上的星星不说话，地上的三星会爆炸。手上的Note7炸呀炸，辛苦的钱啊都白花。啊～啊啊～啊～啊啊啊啊～夜夜想起库克的话，三星的Note7会爆炸……'}
 DuanziBean{author='光消失的地方', lastUpdateTime='2 hours ago', content='Windows系统有两个骗局，一个是接上新硬件时通过Windows
@@ -90,7 +98,7 @@ DuanziBean{author='老和', lastUpdateTime='5 hours ago', content='饿得睡不�
 
 ```
 
-###煎蛋网-妹子图列表
+###煎蛋网-妹子图列表http://jandan.net/ooxx
 ```
 MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww1.sinaimg.cn/large/66b3de17gw1f7wva5yw4aj20m80xcn52.jpg]}
 MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww3.sinaimg.cn/large/66b3de17gw1f7wva555hjj20np0zkdja.jpg]}
@@ -102,15 +110,25 @@ MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww3.sinai
 ```
 
 
-###煎蛋网-无聊图列表
+###煎蛋网-无聊图列表http://jandan.net/pic
 ```
 QutuBean{author='食品级怪蜀黍', lastUpdateTime='34 mins ago', imgs=[http://ww2.sinaimg.cn/large/537d92b0jw1f8831xcph0j20jg0dt402.jpg]}
 
 ```
 
-##句子迷
+##句子迷http://www.juzimi.com/
 
 ###句子迷-名人名句-电影台词列表
+
+句子迷的名人名句板块，一共包括：
+
+- 名人名句-电影台词
+- 名人名句-小说摘抄
+- 名人名句-散文美句
+- 名人名句-散文美句
+- 名人名句-连续剧台词
+
+这些个网页数据展现形式是一样的，所以解析方式也是一样的。以电影台词为例，请求url：http://www.juzimi.com/allarticle/jingdiantaici?page=  解析出来的数据格式如下所示：
 ```
 SentenceSimple{title='《暮光之城：月食》', content='1. 我立马就会回来的。照管好我的心，我已经把它交给了你。 2. 我会在你还来不及想我的时候就会来的， 看好我的心——我把它留在你身边了。 ...', imgUrl='http://file.juzimi.com/category_pictures/201401/muguangzhicheng_yueshijingdianyulu29001.jpg', detailUrl='http://www.juzimi.com/article/29001', source_num='《暮光之城：月食》台词 (8)'}
 SentenceSimple{title='《家园防线》', content='1. 无论你在想什么，再想想。 ...', imgUrl='http://file.juzimi.com/category_pictures/201406/jiayuanfangxianjingdianyulu47920.jpg', detailUrl='http://www.juzimi.com/article/47920', source_num='《家园防线》台词 (1)'}
@@ -124,18 +142,15 @@ SentenceSimple{title='《黄金时代》', content='1. 我不能选择怎么生�
 SentenceSimple{title='《分手不分手》', content='1. 女人不伤心是因为她不走心，不嫉妒也就是不爱。 2. 嫁给你这么不负责人的男人，我就要吃一辈子苦。 ...', imgUrl='http://file.juzimi.com/category_pictures/201505/fenshoubufenshoujingdianyulu158931.jpg', detailUrl='http://www.juzimi.com/article/158931', source_num='《分手不分手》台词 (8)'}
 SentenceSimple{title='《记忆裂痕》', content='1. 人生就是经历累积而成，况且，有些快乐的事完全是错误的。 2. 如果你只看逃不了的地方，就会错失底下的财富。 ...', imgUrl='http://file.juzimi.com/category_pictures/201410/jiyiliehenjingdianyulu81480.jpg', detailUrl='http://www.juzimi.com/article/81480', source_num='《记忆裂痕》台词 (6)'}
 SentenceSimple{title='《海扁王2》', content='1. Try to have fun. Otherwise, what's the point? 尽量过得开心点。不然的话，有什么意思？ ...', imgUrl='http://file.juzimi.com/category_pictures/201503/haibianwang2jingdianyulu137761.jpg', detailUrl='http://www.juzimi.com/article/137761', source_num='《海扁王2》台词 (1)'}
-SentenceSimple{title='《不朽的园丁》', content='1. 你叫我回家，可是你要知道你才是我的家 ...', imgUrl='http://file.juzimi.com/category_pictures/201401/buxiudeyuandingjingdianyulu28827.jpg', detailUrl='http://www.juzimi.com/article/28827', source_num='《不朽的园丁》台词 (1)'}
-SentenceSimple{title='《危险关系》', content='1. 认真了，你就输了 2. 我心里一直有一个女人，她不是你... ...', imgUrl='http://file.juzimi.com/category_pictures/201407/weixianguanxijingdianyulu26233.jpg', detailUrl='http://www.juzimi.com/article/26233', source_num='《危险关系》台词 (6)'}
-SentenceSimple{title='《哈利·波特与火焰杯》', content='1. If you want to know what a man's like, take a good look at how he treat...', imgUrl='http://file.juzimi.com/category_pictures/201502/haliboteyuhuoyanbeijingdianyulu117307.jpg', detailUrl='http://www.juzimi.com/article/117307', source_num='《哈利·波特与火焰杯》台词 (3)'}
-SentenceSimple{title='《洛奇》', content='1. 让我告诉你一件事，如果没有你，今天我可能不会活着，你在这里及所有的表现给了我，你称它为什么？活下去的动机？因为我认为人们不想活下去，就会死亡，...', imgUrl='http://file.juzimi.com/category_pictures/201312/luoqijingdianyulu28175.jpg', detailUrl='http://www.juzimi.com/article/28175', source_num='《洛奇》台词 (4)'}
-SentenceSimple{title='《冠军》', content='1. “人生就是不放弃坚持到底!” —献给那些为理想努力着的人们 2. We are the compion,就算不能征服全世界，也要拥有自己...', imgUrl='http://file.juzimi.com/category_pictures/201312/guanjunjingdianyulu28093.jpg', detailUrl='http://www.juzimi.com/article/28093', source_num='《冠军》台词 (2)'}
-SentenceSimple{title='《我们需要谈谈凯文》', content='1. 妈妈，我是你的投影，是你的恶，是你不为人知不愿承认的。 ...', imgUrl='http://file.juzimi.com/category_pictures/201311/womenxuyaotantankaiwenjingdianyulu25951.jpg', detailUrl='http://www.juzimi.com/article/25951', source_num='《我们需要谈谈凯文》台词 (1)'}
-SentenceSimple{title='《伤城》', content='1. 寂寞是听见某个熟悉名字，不小心想起某些故事；孤独是路过我身边的影子，笑着对我说似曾相识。 2. 年轻的时候我们都想着要去改变这个世界，到头...', imgUrl='http://file.juzimi.com/category_pictures/201310/shangchengjingdianyulu6565.jpg', detailUrl='http://www.juzimi.com/article/%E4%BC%A4%E5%9F%8E', source_num='《伤城》台词 (17)'}
-SentenceSimple{title='《黑客帝国》', content='1. 所谓选择，都是虚幻。 2. We are not here because we are free .we are here becaus...', imgUrl='http://file.juzimi.com/category_pictures/201312/heikediguojingdianyulu8456.jpg', detailUrl='http://www.juzimi.com/article/%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD', source_num='《黑客帝国》台词 (13)'}
-
 ```
 
 ###句子迷-原创句子
+原创句子模块中分为：
+
+- 原创句子-最新原创的句子
+- 原创句子-本周热门原创的句子
+- 原创句子-推荐原创的句子
+这三个模块，和句子迷-名人名句-详情(句子合集-列表)的展现形式是一样的，所以解析方式也是一样的，我们以最新原创句子为例，请求的url是http://www.juzimi.com/original/ju?page=  ，解析出来的数据结构为：
 ```
 SentenceDetail{content='这里终究不是我的归处 总有一天还是会选择离开 只是下一次又能逃到哪里 可以不悲伤 可以不迷惘'}
 SentenceDetail{content='我的人生如一张白纸，你们从上面走过，上面变有了足迹。'}
@@ -151,6 +166,12 @@ SentenceDetail{content='若没有放弃一切的勇气，又怎么值得去拥�
 ```
 
 ###句子迷-精选句集
+精选句集分为:
+
+ - 精选句集
+ - 最新句集
+这两个模块展现形式是一样的，所以解析方式也是一样的，我们以精选句集为例，请求的url是http://www.juzimi.com/albums?page=  ，解析出来的数据结构为：
+
 ```
 SentenceCollection{title='人生哲学', desc='睿智是最高目标，思想主导一切。', imgUrl='http://file.juzimi.com/avatar_selection/avatar0035.jpg', detailUrl='http://www.juzimi.com//album/39826', username='冰心兰玉', count='136'}
 SentenceCollection{title='盗墓笔记·同人', desc='', imgUrl='http://file.juzimi.com/pictures/201508/picture-275923_2021825316.jpg', detailUrl='http://www.juzimi.com//album/1077096', username='听书人却入戏深', count='313'}
@@ -168,6 +189,13 @@ SentenceCollection{title='世界上最悲伤的句子', desc='这些句子，记
 ```
 
 ###句子迷-图文美句
+精选句集分为:
+
+ - 美图美句
+ - 手写美句
+ -  经典对白
+这三个模块展现形式是一样的，所以解析方式也是一样的，我们以精选句集为例，请求的url是http://www.juzimi.com/meitumeiju?page=  ，解析出来的数据结构为：
+
 ```
 SentenceImageText{text='在这场友情的游戏里，最终我们选择彼此伤害，你让我百孔千疮，而我则让你落花成伤。', desc='在这场友情的游戏里，最终我们选择彼此伤害，你让我百孔千疮，而我则让你落花成伤。', url='http://www.juzimi.com/ju/59088', pic='http://file.juzimi.com/weibopic/jazlma4.jpg'}
 SentenceImageText{text='宇宙之大，每个生命，都在孤寂。 ——@许嵩 《宇宙之大》', desc='宇宙之大，每个生命，都在孤寂。 ——许嵩 《宇宙之大》', url='http://www.juzimi.com/ju/472340', pic='http://file.juzimi.com/weibopic/juzomo3.jpg'}
@@ -179,23 +207,22 @@ SentenceImageText{text='我对你根本没抱幻想。我知道你愚蠢，轻�
 SentenceImageText{text='“那么，结局如何？学长他知道吗？”   “他知道，但结局有点悲伤。 因为我成绩优异，所以去了美国念高中，跟在美国的爸爸住在一起。”  “那的确很悲伤。” “但是我想过了，学长他就像我生命中的灵感，他让我了解爱的积极意义，他就像是让我一直前进的动力，让我有了今天的成绩。” 《初恋这件小事》', desc='“那么，结局如何？学长他知道吗？”   “他知道，但结局有点悲伤。 因为我成绩优异，所以去了美国念高中，跟在美国的爸爸住在一起。”  “那的确很悲伤。” “但是我想过了，学长他就像我生命中的灵感，他让我了解爱的积极意义，他就像是让我一直前进的动力，让我有了今天的成绩。” 《初恋这件小事》', url='http://www.juzimi.com/ju/120325', pic='http://file.juzimi.com/weibopic/jlzlmr.jpg'}
 SentenceImageText{text='非让现实给你一巴掌，你才知道现实有多残忍。 ——@顾里 《小时代》', desc='非让现实给你一巴掌，你才知道现实有多残忍。 ——顾里 《小时代》', url='http://www.juzimi.com/ju/410673', pic='http://file.juzimi.com/weibopic/jdzxmp2.jpg'}
 SentenceImageText{text='骨头，我来接你回家了。 ——@fresh果果 《花千骨》', desc='骨头，我来接你回家了。 ——fresh果果 《花千骨》', url='http://www.juzimi.com/ju/634050', pic='http://file.juzimi.com/weibopic/jezdmp4.jpg'}
-SentenceImageText{text='真正的力量绝对不是依靠这点东西激发出来的，希灵使徒应掌握更长久更伟大的力量……我们不是一帮被仇恨驱使的疯子，我们应该是为了荣耀和秩序死战不休的战士。即便我们摧毁了一切敌人，甚至摧毁深渊。我们也必须有继续前进下去的理由才行，就像先祖们决定跨过临界层的时候一样，不断前进，没有理由也没有鞭策。前进就是一切，这才是希灵意志！ ——珊多拉 《希灵帝国》', desc='真正的力量绝对不是依靠这点东西激发出来的，希灵使徒应掌握更长久更伟大的力量……我们不是一帮被仇恨驱使的疯子，我们应该是为了荣耀和秩序死战不休的战士。即便我们摧毁了一切敌人，甚至摧毁深渊。我们也必须有继续前进下去的理由才行，就像先祖们决定跨过临界层的时候一样，不断前进，没有理由也没有鞭策。前进就是一切，这才是希灵意志！ ——珊多拉 《希灵帝国》', url='http://www.juzimi.com/ju/590321', pic='http://file.juzimi.com/weibopic/juzamu4.jpg'}
-SentenceImageText{text='谁见过风呢 我和你也没见过 但当树叶颤动 就知风吹过 ——宫崎骏 《起风了》', desc='谁见过风呢 我和你也没见过 但当树叶颤动 就知风吹过 ——宫崎骏 《起风了》', url='http://www.juzimi.com/ju/1552425', pic='http://file.juzimi.com/weibopic/jezxmi7.jpg'}
-SentenceImageText{text='用一首歌的旋律， 回忆某个曾经。  用一首歌的旋律， 倾诉一段光阴。  用一首歌的旋律， 忘掉所有道理。  用一首歌的旋律， 感激过去敬启。  用一首歌的旋律， 把爱恨都看分明。  用一首歌的旋律， 擦掉悲伤的泪滴。  用一首歌的旋律， 祈祷爱情会降临。  用一首歌的旋律， 改变明天和自己。', desc='用一首歌的旋律， 回忆某个曾经。  用一首歌的旋律， 倾诉一段光阴。  用一首歌的旋律， 忘掉所有道理。  用一首歌的旋律， 感激过去敬启。  用一首歌的旋律， 把爱恨都看分明。  用一首歌的旋律， 擦掉悲伤的泪滴。  用一首歌的旋律， 祈祷爱情会降临。  用一首歌的旋律， 改变明天和自己。', url='http://www.juzimi.com/ju/804502', pic='http://file.juzimi.com/weibopic/jrzamp5.jpg'}
-SentenceImageText{text='我曾经默默无语地，毫无指望地爱过你。 ——普希金 《我曾经爱过你》', desc='我曾经默默无语地，毫无指望地爱过你。 ——普希金 《我曾经爱过你》', url='http://www.juzimi.com/ju/609566', pic='http://file.juzimi.com/weibopic/jlzrmp4.jpg'}
-SentenceImageText{text='切忌太美丽，太美丽有罪，快乐太易碎。 ——@黄伟文 《美丽有罪》', desc='切忌太美丽，太美丽有罪，快乐太易碎。 ——黄伟文 《美丽有罪》', url='http://www.juzimi.com/ju/16680', pic='http://file.juzimi.com/weibopic/jizimi3.jpg'}
-SentenceImageText{text='从这个世界上消失，一个DNA都不要留下，顺便抹去别人对你的记忆。 《银魂》', desc='从这个世界上消失，一个DNA都不要留下，顺便抹去别人对你的记忆。 《银魂》', url='http://www.juzimi.com/ju/132666', pic='http://file.juzimi.com/weibopic/jizxmr4.jpg'}
-SentenceImageText{text='黑暗无边 与你并肩 ——@郭敬明 《小时代》', desc='黑暗无边 与你并肩 ——郭敬明 《小时代》', url='http://www.juzimi.com/ju/189412', pic='http://file.juzimi.com/weibopic/jozrmi6.jpg'}
-SentenceImageText{text='“以前答应了一个人，等她等到三十岁，结果三十岁一过，可以结婚，却单身单习惯了。” ——@唐七公子 《岁月是朵两生花》', desc='“以前答应了一个人，等她等到三十岁，结果三十岁一过，可以结婚，却单身单习惯了。” ——唐七公子 《岁月是朵两生花》', url='http://www.juzimi.com/ju/172645', pic='http://file.juzimi.com/weibopic/jpzrmx4.jpg'}
-SentenceImageText{text='好像有什么美好的东西，正逐渐从我生命中剥离，残忍的清晰的近乎窒息的痛苦，绝望的挽留却毫无用处。', desc='好像有什么美好的东西，正逐渐从我生命中剥离，残忍的清晰的近乎窒息的痛苦，绝望的挽留却毫无用处。', url='http://www.juzimi.com/ju/889122', pic='http://file.juzimi.com/weibopic/jizamu5.jpg'}
-SentenceImageText{text='遗忘有一把竖琴，记忆用它弹奏无声的忧伤。 你的童年是小村庄，可是，你走不出它的边际，无论你远行到何方。 ——@阿多尼斯 《我的孤独是一座花园》', desc='遗忘有一把竖琴，记忆用它弹奏无声的忧伤。 你的童年是小村庄，可是，你走不出它的边际，无论你远行到何方。 ——阿多尼斯 《我的孤独是一座花园》', url='http://www.juzimi.com/ju/403093', pic='http://file.juzimi.com/weibopic/jdzemo3.jpg'}
-SentenceImageText{text='众里嫣然通一顾,人间颜色如尘土。 ——@王国维 《人间词》', desc='众里嫣然通一顾,人间颜色如尘土。 ——王国维 《人间词》', url='http://www.juzimi.com/ju/672157', pic='http://file.juzimi.com/weibopic/jpzpml7.jpg'}
-
 ```
 
-##51妹子
+##51妹子http://www.51xw.net/meizi/
 
 ###51妹子-最新-妹子列表
+
+妹子列表分类为:
+
+ - 最新
+ - 最热
+ -  推荐
+ - 日榜
+ - 周榜
+ -  月榜
+
+这六组列表展现形式是一样的，所以解析方式也是一样的，我们以最新列表为例，请求的url是http://www.51xw.net/meizi/index_1.html  ，解析出来的数据结构为：
 ```
 JokeBean{userName='有创意的美容广告', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/975/5104975.jpg', tags=[碉堡, 亮了, 惊呆, 城会玩], dataBean=DataBean{content='null', showImg='http://image4.pengfu.cn/origin/160927/57e9b9c5b3e54.jpg', gifsrcImg='', width='490', height='601'}}
 JokeBean{userName='熊猫夫妇亲热被偷窥狂打断', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/358/2041358.jpg', tags=[动态图, 亮了, 新纪元, 吐槽], dataBean=DataBean{content='null', showImg='http://image3.pengfu.cn/thumb/160927/57e9bc889795e.jpg', gifsrcImg='http://image3.pengfu.cn/origin/160927/57e9bc889795e.gif', width='400', height='225'}}
@@ -209,11 +236,13 @@ JokeBean{userName='这次真猜不出来，大家帮忙猜猜', lastTime='2016-0
 JokeBean{userName='天下武功 无坚不摧 唯快不破！', lastTime='2016-09-26', userAvatar='http://avatar.pengfu.cn/small/794/9764794.jpg', tags=[动态图, 小正太, 熊孩子, 城会玩], dataBean=DataBean{content='null', showImg='http://image1.pengfu.cn/thumb/160926/57e879aa662d7.jpg', gifsrcImg='http://image1.pengfu.cn/origin/160926/57e879aa662d7.gif', width='300', height='196'}}
 ```
 ###51妹子-最新-妹子详情
+妹子详情的url可以由上方解析出来的列表得到，如：http://www.51xw.net/meizi/3863.html，解析出来的数据结构为：
 ```
-MeiziDetail{tag=null, imgBeans=[ImageBean{detailUrl='http://www.51xw.net/meizi/3863_1.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c60cc05bf7a7.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c60cc05bf7a7.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(1)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_2.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c60d1ae87851.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c60d1ae87851.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(2)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_3.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c60e872e6669.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c60e872e6669.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(3)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_4.html', imgUrl='http://c.51xw.net/thumb/84x125/1/01c60f19cea6d6.jpg', imgUrlLarge='http://c.51xw.net/img/1,01c60f19cea6d6.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(4)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_5.html', imgUrl='http://c15.51xw.net/thumb/84x125/6/01c61018b73661.jpg', imgUrlLarge='http://c15.51xw.net/img/6,01c61018b73661.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(5)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_6.html', imgUrl='http://c15.51xw.net/thumb/84x125/2/01c6119d7a6901.jpg', imgUrlLarge='http://c15.51xw.net/img/2,01c6119d7a6901.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(6)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_7.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c6127f0a2d0b.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c6127f0a2d0b.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(7)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_8.html', imgUrl='http://c.51xw.net/thumb/84x125/6/01c6130e9d7bdd.jpg', imgUrlLarge='http://c.51xw.net/img/6,01c6130e9d7bdd.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(8)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_9.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c6148fabd5b9.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c6148fabd5b9.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(9)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_10.html', imgUrl='http://c15.51xw.net/thumb/84x125/5/01c6152613d78c.jpg', imgUrlLarge='http://c15.51xw.net/img/5,01c6152613d78c.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(10)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_11.html', imgUrl='http://c15.51xw.net/thumb/84x125/4/01c616925fa7f4.jpg', imgUrlLarge='http://c15.51xw.net/img/4,01c616925fa7f4.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(11)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_12.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c617bca1fb30.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c617bca1fb30.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(12)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_13.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c618da0d7d9b.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c618da0d7d9b.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(13)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_14.html', imgUrl='http://c15.51xw.net/thumb/84x125/3/01c6197aa791b6.jpg', imgUrlLarge='http://c15.51xw.net/img/3,01c6197aa791b6.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(14)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_15.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c61af34ab625.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c61af34ab625.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(15)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_16.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c61b170596bc.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c61b170596bc.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(16)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_17.html', imgUrl='http://c15.51xw.net/thumb/84x125/2/01c61c1676397c.jpg', imgUrlLarge='http://c15.51xw.net/img/2,01c61c1676397c.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(17)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_18.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c61d57590321.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c61d57590321.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(18)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_19.html', imgUrl='http://c15.51xw.net/thumb/84x125/5/01c61e027a9b50.jpg', imgUrlLarge='http://c15.51xw.net/img/5,01c61e027a9b50.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(19)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_20.html', imgUrl='http://c15.51xw.net/thumb/84x125/3/01c61f984dd27f.jpg', imgUrlLarge='http://c15.51xw.net/img/3,01c61f984dd27f.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(20)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_21.html', imgUrl='http://c15.51xw.net/thumb/84x125/3/01c620997d6c51.jpg', imgUrlLarge='http://c15.51xw.net/img/3,01c620997d6c51.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(21)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_22.html', imgUrl='http://c15.51xw.net/thumb/84x125/2/01c6217624a9b3.jpg', imgUrlLarge='http://c15.51xw.net/img/2,01c6217624a9b3.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(22)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_23.html', imgUrl='http://c15.51xw.net/thumb/84x125/5/01c6228146c71e.jpg', imgUrlLarge='http://c15.51xw.net/img/5,01c6228146c71e.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(23)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_24.html', imgUrl='http://c15.51xw.net/thumb/84x125/3/01c623705c69a5.jpg', imgUrlLarge='http://c15.51xw.net/img/3,01c623705c69a5.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(24)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_25.html', imgUrl='http://c.51xw.net/thumb/84x125/5/01c624ac8abb1e.jpg', imgUrlLarge='http://c.51xw.net/img/5,01c624ac8abb1e.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(25)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_26.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c6255893c1b8.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c6255893c1b8.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(26)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_27.html', imgUrl='http://c15.51xw.net/thumb/84x125/3/01c626b4efed9f.jpg', imgUrlLarge='http://c15.51xw.net/img/3,01c626b4efed9f.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(27)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_28.html', imgUrl='http://c15.51xw.net/thumb/84x125/4/01c627a1c2363b.jpg', imgUrlLarge='http://c15.51xw.net/img/4,01c627a1c2363b.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(28)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_29.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c62848400061.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c62848400061.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(29)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_30.html', imgUrl='http://c.51xw.net/thumb/84x125/1/01c62907d65cdc.jpg', imgUrlLarge='http://c.51xw.net/img/1,01c62907d65cdc.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(30)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_31.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c62a34cda81b.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c62a34cda81b.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(31)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_32.html', imgUrl='http://c.51xw.net/thumb/84x125/2/01c62b91e9b320.jpg', imgUrlLarge='http://c.51xw.net/img/2,01c62b91e9b320.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(32)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_33.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c62c029c8989.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c62c029c8989.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(33)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_34.html', imgUrl='http://c.51xw.net/thumb/84x125/7/01c62d89d01947.jpg', imgUrlLarge='http://c.51xw.net/img/7,01c62d89d01947.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(34)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_35.html', imgUrl='http://c15.51xw.net/thumb/84x125/6/01c62e34bfc8ea.jpg', imgUrlLarge='http://c15.51xw.net/img/6,01c62e34bfc8ea.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(35)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_36.html', imgUrl='http://c15.51xw.net/thumb/84x125/6/01c62f1dd1b1eb.jpg', imgUrlLarge='http://c15.51xw.net/img/6,01c62f1dd1b1eb.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(36)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_37.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c630c55e7bd5.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c630c55e7bd5.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(37)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_38.html', imgUrl='http://c15.51xw.net/thumb/84x125/2/01c631de5eb506.jpg', imgUrlLarge='http://c15.51xw.net/img/2,01c631de5eb506.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(38)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_39.html', imgUrl='http://c.51xw.net/thumb/84x125/2/01c6321679ac19.jpg', imgUrlLarge='http://c.51xw.net/img/2,01c6321679ac19.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(39)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_40.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c6330fe15af5.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c6330fe15af5.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(40)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_41.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c6343241451d.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c6343241451d.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(41)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_42.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c635c99dfc8b.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c635c99dfc8b.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(42)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_43.html', imgUrl='http://c15.51xw.net/thumb/84x125/3/01c636a17913ee.jpg', imgUrlLarge='http://c15.51xw.net/img/3,01c636a17913ee.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(43)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_44.html', imgUrl='http://c.51xw.net/thumb/84x125/7/01c637ed5ae5a4.jpg', imgUrlLarge='http://c.51xw.net/img/7,01c637ed5ae5a4.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(44)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_45.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c63889bb0048.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c63889bb0048.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(45)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_46.html', imgUrl='http://c15.51xw.net/thumb/84x125/2/01c639ee13d7a0.jpg', imgUrlLarge='http://c15.51xw.net/img/2,01c639ee13d7a0.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(46)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_47.html', imgUrl='http://c.51xw.net/thumb/84x125/6/01c63ab4c930b9.jpg', imgUrlLarge='http://c.51xw.net/img/6,01c63ab4c930b9.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(47)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_48.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c63b07ee6c21.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c63b07ee6c21.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(48)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_49.html', imgUrl='http://c.51xw.net/thumb/84x125/6/01c63c5c082c9f.jpg', imgUrlLarge='http://c.51xw.net/img/6,01c63c5c082c9f.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(49)'}]}
+MeiziDetail{tag=null, imgBeans=[ImageBean{detailUrl='http://www.51xw.net/meizi/3863_1.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c60cc05bf7a7.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c60cc05bf7a7.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(1)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_2.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c60d1ae87851.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c60d1ae87851.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(2)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_3.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c60e872e6669.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c60e872e6669.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(3)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_4.html', imgUrl='http://c.51xw.net/thumb/84x125/1/01c60f19cea6d6.jpg', imgUrlLarge='http://c.51xw.net/img/1,01c60f19cea6d6.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(4)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_5.html', imgUrl='http://c15.51xw.net/thumb/84x125/6/01c61018b73661.jpg', imgUrlLarge='http://c15.51xw.net/img/6,01c61018b73661.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(5)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_6.html', imgUrl='http://c15.51xw.net/thumb/84x125/2/01c6119d7a6901.jpg', imgUrlLarge='http://c15.51xw.net/img/2,01c6119d7a6901.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(6)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_7.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c6127f0a2d0b.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c6127f0a2d0b.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(7)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_8.html', imgUrl='http://c.51xw.net/thumb/84x125/6/01c6130e9d7bdd.jpg', imgUrlLarge='http://c.51xw.net/img/6,01c6130e9d7bdd.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(8)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_9.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c6148fabd5b9.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c6148fabd5b9.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(9)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_10.html', imgUrl='http://c15.51xw.net/thumb/84x125/5/01c6152613d78c.jpg', imgUrlLarge='http://c15.51xw.net/img/5,01c6152613d78c.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(10)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_11.html', imgUrl='http://c15.51xw.net/thumb/84x125/4/01c616925fa7f4.jpg', imgUrlLarge='http://c15.51xw.net/img/4,01c616925fa7f4.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(11)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_12.html', imgUrl='http://c.51xw.net/thumb/84x125/3/01c617bca1fb30.jpg', imgUrlLarge='http://c.51xw.net/img/3,01c617bca1fb30.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(12)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_13.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c618da0d7d9b.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c618da0d7d9b.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(13)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_14.html', imgUrl='http://c15.51xw.net/thumb/84x125/3/01c6197aa791b6.jpg', imgUrlLarge='http://c15.51xw.net/img/3,01c6197aa791b6.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(14)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_15.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c61af34ab625.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c61af34ab625.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(15)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_16.html', imgUrl='http://c15.51xw.net/thumb/84x125/1/01c61b170596bc.jpg', imgUrlLarge='http://c15.51xw.net/img/1,01c61b170596bc.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(16)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_17.html', imgUrl='http://c15.51xw.net/thumb/84x125/2/01c61c1676397c.jpg', imgUrlLarge='http://c15.51xw.net/img/2,01c61c1676397c.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(17)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_18.html', imgUrl='http://c15.51xw.net/thumb/84x125/7/01c61d57590321.jpg', imgUrlLarge='http://c15.51xw.net/img/7,01c61d57590321.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(18)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_19.html', imgUrl='http://c15.51xw.net/thumb/84x125/5/01c61e027a9b50.jpg', imgUrlLarge='http://c15.51xw.net/img/5,01c61e027a9b50.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(19)'}, ImageBean{detailUrl='http://www.51xw.net/meizi/3863_20.html', imgUrl='http://c15.51xw.net/thumb/84x125/3/01c61f984dd27f.jpg', imgUrlLarge='http://c15.51xw.net/img/3,01c61f984dd27f.jpg', width='84', height='125', title='陈思雨大尺度玉体美乳诱惑写真下载(20)'}
 
 ```
-##捧腹网
+##捧腹网http://m.pengfu.com
+之前，我已经利用捧腹网，做了一个简单的app，源码地址放在了github上：https://github.com/zuiwuyuan/Joke， 有兴趣的朋友去看看，对你利用其余的数据api应该有所帮助。
 
 ###捧腹网-最新笑话
 ```
@@ -279,8 +308,21 @@ JokeBean{userName='天下武功 无坚不摧 唯快不破！', lastTime='2016-09
 ```
 
 
-##51贴图
-###51贴图-首页
+##51贴图http://m.51tietu.net
+
+###51贴图-首页http://m.51tietu.net
+
+![这里写图片描述](http://img.blog.csdn.net/20160927224833568)
+![这里写图片描述](http://img.blog.csdn.net/20160927224859944)
+首页的数据分为五部分：
+
+ - Banner
+ - 图片广场
+ -  最近更新
+ - 首页推荐
+ - 精美文章
+
+其中，图片广场/最近更新/首页推荐/精美文章这四个部分的数据结构一样，网页数据解析出来后，数据结构如下:
 ```
 <!-- Banner -->
 TieTuBannerBean{imgUrl='http://img2.51tietu.net/upload/20160802/20160802015625ycAv5.jpg', detailUrl='http://www.51tietu.net/tag/%E5%A5%B3%E7%94%9F/'}
@@ -339,6 +381,59 @@ TieTuHomeListBean{title='', imgUrl='http://img2.51tietu.net/upload/thumb/2016092
 TieTuHomeListBean{title='', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160619151656rbsriacwxbl14280x180.jpg', detailUrl='http://m.51tietu.net/weitu/42066.html'}
 ```
 ###51贴图-根据类型查看图片列表
+
+根据类型查看图片列表，每个请求的url不尽相同：
+
+```
+   // 图片广场
+    public static final String TIETU_TYPE_P = "http://m.51tietu.net/p/0";
+
+    // 小清新
+    public static final String TIETU_TYPE_XIAOQINGXIN = "http://m.51tietu.net/xiaoqingxin/0";
+
+    // 唯美
+    public static final String TIETU_TYPE_TP = "http://m.51tietu.net/tp/";
+
+    // lomo图片
+    public static final String TIETU_TYPE_LOMO = "http://m.51tietu.net/lomo/0";
+
+    // 非主流
+    public static final String TIETU_TYPE_FZL = "http://m.51tietu.net/fzl/0";
+
+    // 女生图片
+    public static final String TIETU_TYPE_NVDR = "http://m.51tietu.net/nvdr/0";
+
+    // 文字图片
+    public static final String TIETU_TYPE_QMT = "http://m.51tietu.net/qmt/0";
+
+    // QQ皮肤
+    public static final String TIETU_TYPE_mk = "http://m.51tietu.net/mk/0";
+
+    // 伤感图片
+    public static final String TIETU_TYPE_SHANGAN = "http://m.51tietu.net/shangan/0";
+
+    // 爱情图片
+    public static final String TIETU_TYPE_AIQING = "http://m.51tietu.net/aiqing/0";
+
+    // 搞笑图片
+    public static final String TIETU_TYPE_GAOXIAO = "http://m.51tietu.net/gaoxiao/0";
+
+    // 卡通图片
+    public static final String TIETU_TYPE_KTTP = "http://m.51tietu.net/kttp/0";
+
+    // 动漫图片
+    public static final String TIETU_TYPE_DONGMAN = "http://m.51tietu.net/dongman/0";
+
+    // 二次元
+    public static final String TIETU_TYPE_CIYUAN = "http://m.51tietu.net/2ciyuan/0";
+
+    // 素材图片
+    public static final String TIETU_TYPE_YOUXIBIZHI = "http://m.51tietu.net/youxibizhi/0";
+
+    // 美文
+    public static final String TIETU_TYPE_WEITU = "http://m.51tietu.net/weitu/0";
+```
+根据不同的url，解析出来的数据结构是一样的，如下：
 ```
 TieTuListBean{title='鲜花唯美意境非主流QQ空', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160718222628o1utikutlil280x180.jpg', detailUrl='http://m.51tietu.net/tp/42929.html'}
 TieTuListBean{title='女生图片素材唯美伤感背影', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160718225727gi3hjujs3ik280x180.jpg', detailUrl='http://m.51tietu.net/tp/42919.html'}
@@ -358,6 +453,9 @@ TieTuListBean{title='山林唯美风景清新意境美图', imgUrl='http://img2.
 TieTuListBean{title='繁华都市夜幕下唯美背景图', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160718215745pyvuyjovtf3280x180.jpg', detailUrl='http://m.51tietu.net/tp/42755.html'}
 ```
 ###51贴图-根据类型查看图片详情
+-  图片详情
+-  精美文章详情
+这两个详情页面的数据结构是一样的，我们以http://m.51tietu.net/tp/42208.html为例，解析出来的数据结构如下：
 ```
 TieTuDetailBean{imgUrl='http://img2.51tietu.net/upload/www.51tietu.net/2016-061915/20160619151702oz4ylljf2fv39.jpg', desc='null'}
 TieTuDetailBean{imgUrl='null', desc=''}
