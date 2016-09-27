@@ -25,7 +25,7 @@ public class MeiziUtil {
      *
      * @param url
      */
-    public void getMeiZilist(Context mContext, final String url) {
+    public void getMeiZilist(final Context mContext, final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -37,7 +37,6 @@ public class MeiziUtil {
 
                     Document doc = Jsoup.connect(url).timeout(10000).userAgent("Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52").get();
 //                    System.out.println(doc);
-
 
                     Elements mainLists = doc.getElementsByClass("m-list-main");
                     if (mainLists != null) {
@@ -80,11 +79,22 @@ public class MeiziUtil {
                                                 meiziSimples.add(meiziSimple);
                                             }
                                         }
-
                                     }
+
+
                                 }
                             }
                         }
+
+                        StringBuffer sb = new StringBuffer();
+                        for (int i = 0; i < meiziSimples.size(); i++) {
+                            String data = meiziSimples.get(i).toString();
+                            sb.append(data).append("\n");
+                        }
+
+                        Intent intent = new Intent(mContext, ShowActivity.class);
+                        intent.putExtra("data", sb.toString());
+                        mContext.startActivity(intent);
                     }
 
                 } catch (IOException e) {
@@ -201,7 +211,7 @@ public class MeiziUtil {
      *
      * @param url
      */
-    public void getMeiZilistMobile(final Context mContext,final String url) {
+    public void getMeiZilistMobile(final Context mContext, final String url) {
 
         new Thread(new Runnable() {
             @Override
