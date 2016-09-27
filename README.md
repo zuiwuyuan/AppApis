@@ -5,6 +5,91 @@
 通过UserAgent判断智能手机(设备,Android,IOS)
 http://free0007.iteye.com/blog/2017329/
 
+##句子迷
+
+###句子迷-名人名句-电影台词列表
+```
+SentenceSimple{title='《暮光之城：月食》', content='1. 我立马就会回来的。照管好我的心，我已经把它交给了你。 2. 我会在你还来不及想我的时候就会来的， 看好我的心——我把它留在你身边了。 ...', imgUrl='http://file.juzimi.com/category_pictures/201401/muguangzhicheng_yueshijingdianyulu29001.jpg', detailUrl='http://www.juzimi.com/article/29001', source_num='《暮光之城：月食》台词 (8)'}
+SentenceSimple{title='《家园防线》', content='1. 无论你在想什么，再想想。 ...', imgUrl='http://file.juzimi.com/category_pictures/201406/jiayuanfangxianjingdianyulu47920.jpg', detailUrl='http://www.juzimi.com/article/47920', source_num='《家园防线》台词 (1)'}
+SentenceSimple{title='《变形金刚4》', content='1. 不知道为什么有些人总是会让人为他而牺牲生命？也许这就是领袖的魅力。擎天柱的魅力！ 2. 你们要像他们保护你们一样保护他们！ ...', imgUrl='http://file.juzimi.com/category_pictures/201406/bianxingjingang4jingdianyulu53483.jpg', detailUrl='http://www.juzimi.com/article/53483', source_num='《变形金刚4》台词 (26)'}
+SentenceSimple{title='《年少轻狂》', content='1. 大学四年里面，就算最后一天都没有爱情也没关系。 2. 只有爱人才会留住美的永恒。 ...', imgUrl='http://file.juzimi.com/category_pictures/201504/nianshaoqingkuangjingdianyulu54421.jpg', detailUrl='http://www.juzimi.com/article/54421', source_num='《年少轻狂》台词 (9)'}
+SentenceSimple{title='《宋家皇朝》', content='1. 时代的进步必付出行动的勇气而不是瞻前顾，只允许接受，不许批评是中古精神而不是现代准则。 2. 也许在任何革命中死得最多的是男人，但受伤最深...', imgUrl='http://file.juzimi.com/category_pictures/201511/songjiahuangchaojingdianyulu244025.jpg', detailUrl='http://www.juzimi.com/article/244025', source_num='《宋家皇朝》台词 (2)'}
+SentenceSimple{title='《谁说我们不会爱》', content='1. 今夜，所有的人都是最真实的。 2. 在天台那晚上，你们到底有没有？ ...', imgUrl='http://file.juzimi.com/category_pictures/201401/shuishuowomenbuhuiaijingdianyulu29668.jpg', detailUrl='http://www.juzimi.com/article/29668', source_num='《谁说我们不会爱》台词 (17)'}
+SentenceSimple{title='《王尔德》', content='1. 世界在我掌握中，我却掌握不住对你的感情。 2. 为什么幸福竟依赖这么细小的东西 ...', imgUrl='http://file.juzimi.com/category_pictures/201312/wangerdejingdianyulu26927.jpg', detailUrl='http://www.juzimi.com/article/26927', source_num='《王尔德》台词 (4)'}
+SentenceSimple{title='《伊豆的舞女》', content='1. 当我拥有你，无论是在百货公司买领带，还是在厨房收拾一尾鱼，我都觉得幸福。爱像一股暖流滋润着我。当我失去你，即便面对鸟语花香我也兴味索然。一切显...', imgUrl='http://file.juzimi.com/category_pictures/201312/yidoudewunvjingdianyulu9607.jpg', detailUrl='http://www.juzimi.com/article/%E4%BC%8A%E8%B1%86%E7%9A%84%E8%88%9E%E5%A5%B3', source_num='《伊豆的舞女》台词 (20)'}
+SentenceSimple{title='《黄金时代》', content='1. 我不能选择怎么生，怎么死，但我能决定怎么爱，怎么活。这是我要的自由，我的黄金时代。 2. 钞票带在我的衣袋里，就这样，两个人理直气壮地走在...', imgUrl='http://file.juzimi.com/category_pictures/201409/huangjinshidaijingdianyulu75067.jpg', detailUrl='http://www.juzimi.com/article/75067', source_num='《黄金时代》台词 (21)'}
+SentenceSimple{title='《分手不分手》', content='1. 女人不伤心是因为她不走心，不嫉妒也就是不爱。 2. 嫁给你这么不负责人的男人，我就要吃一辈子苦。 ...', imgUrl='http://file.juzimi.com/category_pictures/201505/fenshoubufenshoujingdianyulu158931.jpg', detailUrl='http://www.juzimi.com/article/158931', source_num='《分手不分手》台词 (8)'}
+SentenceSimple{title='《记忆裂痕》', content='1. 人生就是经历累积而成，况且，有些快乐的事完全是错误的。 2. 如果你只看逃不了的地方，就会错失底下的财富。 ...', imgUrl='http://file.juzimi.com/category_pictures/201410/jiyiliehenjingdianyulu81480.jpg', detailUrl='http://www.juzimi.com/article/81480', source_num='《记忆裂痕》台词 (6)'}
+SentenceSimple{title='《海扁王2》', content='1. Try to have fun. Otherwise, what's the point? 尽量过得开心点。不然的话，有什么意思？ ...', imgUrl='http://file.juzimi.com/category_pictures/201503/haibianwang2jingdianyulu137761.jpg', detailUrl='http://www.juzimi.com/article/137761', source_num='《海扁王2》台词 (1)'}
+SentenceSimple{title='《不朽的园丁》', content='1. 你叫我回家，可是你要知道你才是我的家 ...', imgUrl='http://file.juzimi.com/category_pictures/201401/buxiudeyuandingjingdianyulu28827.jpg', detailUrl='http://www.juzimi.com/article/28827', source_num='《不朽的园丁》台词 (1)'}
+SentenceSimple{title='《危险关系》', content='1. 认真了，你就输了 2. 我心里一直有一个女人，她不是你... ...', imgUrl='http://file.juzimi.com/category_pictures/201407/weixianguanxijingdianyulu26233.jpg', detailUrl='http://www.juzimi.com/article/26233', source_num='《危险关系》台词 (6)'}
+SentenceSimple{title='《哈利·波特与火焰杯》', content='1. If you want to know what a man's like, take a good look at how he treat...', imgUrl='http://file.juzimi.com/category_pictures/201502/haliboteyuhuoyanbeijingdianyulu117307.jpg', detailUrl='http://www.juzimi.com/article/117307', source_num='《哈利·波特与火焰杯》台词 (3)'}
+SentenceSimple{title='《洛奇》', content='1. 让我告诉你一件事，如果没有你，今天我可能不会活着，你在这里及所有的表现给了我，你称它为什么？活下去的动机？因为我认为人们不想活下去，就会死亡，...', imgUrl='http://file.juzimi.com/category_pictures/201312/luoqijingdianyulu28175.jpg', detailUrl='http://www.juzimi.com/article/28175', source_num='《洛奇》台词 (4)'}
+SentenceSimple{title='《冠军》', content='1. “人生就是不放弃坚持到底!” —献给那些为理想努力着的人们 2. We are the compion,就算不能征服全世界，也要拥有自己...', imgUrl='http://file.juzimi.com/category_pictures/201312/guanjunjingdianyulu28093.jpg', detailUrl='http://www.juzimi.com/article/28093', source_num='《冠军》台词 (2)'}
+SentenceSimple{title='《我们需要谈谈凯文》', content='1. 妈妈，我是你的投影，是你的恶，是你不为人知不愿承认的。 ...', imgUrl='http://file.juzimi.com/category_pictures/201311/womenxuyaotantankaiwenjingdianyulu25951.jpg', detailUrl='http://www.juzimi.com/article/25951', source_num='《我们需要谈谈凯文》台词 (1)'}
+SentenceSimple{title='《伤城》', content='1. 寂寞是听见某个熟悉名字，不小心想起某些故事；孤独是路过我身边的影子，笑着对我说似曾相识。 2. 年轻的时候我们都想着要去改变这个世界，到头...', imgUrl='http://file.juzimi.com/category_pictures/201310/shangchengjingdianyulu6565.jpg', detailUrl='http://www.juzimi.com/article/%E4%BC%A4%E5%9F%8E', source_num='《伤城》台词 (17)'}
+SentenceSimple{title='《黑客帝国》', content='1. 所谓选择，都是虚幻。 2. We are not here because we are free .we are here becaus...', imgUrl='http://file.juzimi.com/category_pictures/201312/heikediguojingdianyulu8456.jpg', detailUrl='http://www.juzimi.com/article/%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD', source_num='《黑客帝国》台词 (13)'}
+
+```
+
+###句子迷-原创句子
+```
+SentenceDetail{content='这里终究不是我的归处 总有一天还是会选择离开 只是下一次又能逃到哪里 可以不悲伤 可以不迷惘'}
+SentenceDetail{content='我的人生如一张白纸，你们从上面走过，上面变有了足迹。'}
+SentenceDetail{content='其实心里有个忘不掉的人，总在无聊时想想，忙时也想想，吃饭时想想，听歌时想想，晨运时想想。'}
+SentenceDetail{content='我总是会在人群中左右的思考着，为什么我会出现在这里？接下来我该干些什么？我又该去哪，回哪去？'}
+SentenceDetail{content='2016.9.27 如此英气的一张脸 如此英俊的容颜 如此遗憾 如划破天际的流星 如转瞬即逝的樱花 如顺水飘零的落英 如随风起舞的落叶 如一阵风。 去到该去的地方。 从此。 花未眠。 但见花痕 从此 翩翩不在 莞尔不复'}
+SentenceDetail{content='那段时间你就是我的朋友圈。'}
+SentenceDetail{content='其实我，不怕晚，不怕等，不怕你走。 只怕忘不了你。'}
+SentenceDetail{content='想你的思念 文/戚瑞 这雨夜，惆怅整晚的夜色 打湿我这个雨季最脆弱的心 这枯黄了记忆的叶落了整夜 如果我不说你不知 想你的思念总会好的 这雨夜，惆怅整晚的夜色 打湿我这个雨季最脆弱的心 这思念了记忆的秋愁了整夜 如果我不说你不知 想你的思念总会好的'}
+SentenceDetail{content='告诉自己 醒醒吧，别再傻了。 结果醒了，还是傻的。'}
+SentenceDetail{content='若没有放弃一切的勇气，又怎么值得去拥有一切。'}
+
+```
+
+###句子迷-精选句集
+```
+SentenceCollection{title='人生哲学', desc='睿智是最高目标，思想主导一切。', imgUrl='http://file.juzimi.com/avatar_selection/avatar0035.jpg', detailUrl='http://www.juzimi.com//album/39826', username='冰心兰玉', count='136'}
+SentenceCollection{title='盗墓笔记·同人', desc='', imgUrl='http://file.juzimi.com/pictures/201508/picture-275923_2021825316.jpg', detailUrl='http://www.juzimi.com//album/1077096', username='听书人却入戏深', count='313'}
+SentenceCollection{title='古风美文句子', desc='', imgUrl='http://file.juzimi.com/pictures/201604/picture-245749_2060282853.jpg', detailUrl='http://www.juzimi.com//album/789347', username='离惊浅', count='553'}
+SentenceCollection{title='话剧经典台词', desc='孟京辉、廖一梅、赖声川等的戏剧经典台词精选', imgUrl='http://file.juzimi.com/pictures/201305/picture-67_1709089899.jpg', detailUrl='http://www.juzimi.com//album/109977', username='丽儿', count='33'}
+SentenceCollection{title='此去经年', desc='此去经年，应是良辰好景虚设。 便纵有千种风情，更与何人说？', imgUrl='http://file.juzimi.com/pictures/201403/picture-54786_950300402.jpg', detailUrl='http://www.juzimi.com//album/255428', username='迷宫', count='122'}
+SentenceCollection{title='唯美语录', desc='', imgUrl='http://file.juzimi.com/avatar_selection/avatar0017.jpg', detailUrl='http://www.juzimi.com//album/342498', username='丝丝青梦', count='256'}
+SentenceCollection{title='电影经典台词', desc='本句集精选众多最受欢迎的电影经典台词，让我们一起回味那些经典。', imgUrl='http://file.juzimi.com/pictures/201408/picture-118798_470461133.jpg', detailUrl='http://www.juzimi.com//album/433231', username='巴茨贝巴', count='230'}
+SentenceCollection{title='作文素材', desc='', imgUrl='http://file.juzimi.com/pictures/201608/picture-442810_1694766685.jpg', detailUrl='http://www.juzimi.com//album/1199750', username='取蓝', count='98'}
+SentenceCollection{title='高晓松体', desc='很有意思的各个行业版本。起源于高晓松挺舒淇的微博，太欢乐啦。', imgUrl='http://file.juzimi.com/pictures/picture-411820500714.jpg', detailUrl='http://www.juzimi.com//album/19199', username='梦想', count='20'}
+SentenceCollection{title='古风原创句集', desc='', imgUrl='http://file.juzimi.com/pictures/201507/picture-164698_1316252983.jpg', detailUrl='http://www.juzimi.com//album/554459', username='♛琼华烟珞℡', count='138'}
+SentenceCollection{title='人生感悟', desc='当我们懂得幸福的时候，是因为我们懂得了珍惜。 你再怎么改变也不能让每个人都喜欢你，所以还不如做一个自己想做的人。 人生都太短暂，去疯去爱去浪费，去追去梦去后悔。 总有让我们悲伤......', imgUrl='http://file.juzimi.com/avatar_selection/avatar0042.jpg', detailUrl='http://www.juzimi.com//album/87869', username='。_7', count='96'}
+SentenceCollection{title='世界上最悲伤的句子', desc='这些句子，记录着我的哀伤 在那些难过的日子里，与我为伴', imgUrl='http://file.juzimi.com/pictures/picture-7222578.jpg', detailUrl='http://www.juzimi.com//album/427', username='扬小小', count='22'}
+
+```
+
+###句子迷-图文美句
+```
+SentenceImageText{text='在这场友情的游戏里，最终我们选择彼此伤害，你让我百孔千疮，而我则让你落花成伤。', desc='在这场友情的游戏里，最终我们选择彼此伤害，你让我百孔千疮，而我则让你落花成伤。', url='http://www.juzimi.com/ju/59088', pic='http://file.juzimi.com/weibopic/jazlma4.jpg'}
+SentenceImageText{text='宇宙之大，每个生命，都在孤寂。 ——@许嵩 《宇宙之大》', desc='宇宙之大，每个生命，都在孤寂。 ——许嵩 《宇宙之大》', url='http://www.juzimi.com/ju/472340', pic='http://file.juzimi.com/weibopic/juzomo3.jpg'}
+SentenceImageText{text='曾经有个人 爱我如生命 ——@舒仪 《曾有一个人，爱我如生命》', desc='曾经有个人 爱我如生命 ——舒仪 《曾有一个人，爱我如生命》', url='http://www.juzimi.com/ju/82987', pic='http://file.juzimi.com/weibopic/jdzema6.jpg'}
+SentenceImageText{text='选一种姿态，让自己活得无可替代。', desc='选一种姿态，让自己活得无可替代。', url='http://www.juzimi.com/ju/45924', pic='http://file.juzimi.com/weibopic/jizimd1.jpg'}
+SentenceImageText{text='有那么一个人的存在，他让你觉得自己应该要变得更好。可能他是你身边的人，也可能他不是，可能他离你很近，也可能离你很远。因为你想要变成他那样的人，你想要努力，变得温柔，变得倔强。因为努力了，所以慢慢的，我们变成自己喜欢的样子。愿我们都能找到这个人，尽管也许那个人一辈子都不可能知道你。 ——@卢思浩', desc='有那么一个人的存在，他让你觉得自己应该要变得更好。可能他是你身边的人，也可能他不是，可能他离你很近，也可能离你很远。因为你想要变成他那样的人，你想要努力，变得温柔，变得倔强。因为努力了，所以慢慢的，我们变成自己喜欢的样子。愿我们都能找到这个人，尽管也许那个人一辈子都不可能知道你。 ——卢思浩', url='http://www.juzimi.com/ju/247923', pic='http://file.juzimi.com/weibopic/jlzrma1.jpg'}
+SentenceImageText{text='这些人都随着我的长大没有了影子了。是跟着我失去的童年一起失去了吗？ ——@林海音 《城南旧事》', desc='这些人都随着我的长大没有了影子了。是跟着我失去的童年一起失去了吗？ ——林海音 《城南旧事》', url='http://www.juzimi.com/ju/534679', pic='http://file.juzimi.com/weibopic/jlzrmu1.jpg'}
+SentenceImageText{text='我对你根本没抱幻想。我知道你愚蠢，轻佻，头脑空虚，然而我爱你。我知道你的企图、你的理想，你的势利，庸俗，然而我爱你。我知道你是个二流货色，然而我爱你。 ——毛姆 《面纱》', desc='我对你根本没抱幻想。我知道你愚蠢，轻佻，头脑空虚，然而我爱你。我知道你的企图、你的理想，你的势利，庸俗，然而我爱你。我知道你是个二流货色，然而我爱你。 ——毛姆 《面纱》', url='http://www.juzimi.com/ju/459565', pic='http://file.juzimi.com/weibopic/jxzdmp.jpg'}
+SentenceImageText{text='“那么，结局如何？学长他知道吗？”   “他知道，但结局有点悲伤。 因为我成绩优异，所以去了美国念高中，跟在美国的爸爸住在一起。”  “那的确很悲伤。” “但是我想过了，学长他就像我生命中的灵感，他让我了解爱的积极意义，他就像是让我一直前进的动力，让我有了今天的成绩。” 《初恋这件小事》', desc='“那么，结局如何？学长他知道吗？”   “他知道，但结局有点悲伤。 因为我成绩优异，所以去了美国念高中，跟在美国的爸爸住在一起。”  “那的确很悲伤。” “但是我想过了，学长他就像我生命中的灵感，他让我了解爱的积极意义，他就像是让我一直前进的动力，让我有了今天的成绩。” 《初恋这件小事》', url='http://www.juzimi.com/ju/120325', pic='http://file.juzimi.com/weibopic/jlzlmr.jpg'}
+SentenceImageText{text='非让现实给你一巴掌，你才知道现实有多残忍。 ——@顾里 《小时代》', desc='非让现实给你一巴掌，你才知道现实有多残忍。 ——顾里 《小时代》', url='http://www.juzimi.com/ju/410673', pic='http://file.juzimi.com/weibopic/jdzxmp2.jpg'}
+SentenceImageText{text='骨头，我来接你回家了。 ——@fresh果果 《花千骨》', desc='骨头，我来接你回家了。 ——fresh果果 《花千骨》', url='http://www.juzimi.com/ju/634050', pic='http://file.juzimi.com/weibopic/jezdmp4.jpg'}
+SentenceImageText{text='真正的力量绝对不是依靠这点东西激发出来的，希灵使徒应掌握更长久更伟大的力量……我们不是一帮被仇恨驱使的疯子，我们应该是为了荣耀和秩序死战不休的战士。即便我们摧毁了一切敌人，甚至摧毁深渊。我们也必须有继续前进下去的理由才行，就像先祖们决定跨过临界层的时候一样，不断前进，没有理由也没有鞭策。前进就是一切，这才是希灵意志！ ——珊多拉 《希灵帝国》', desc='真正的力量绝对不是依靠这点东西激发出来的，希灵使徒应掌握更长久更伟大的力量……我们不是一帮被仇恨驱使的疯子，我们应该是为了荣耀和秩序死战不休的战士。即便我们摧毁了一切敌人，甚至摧毁深渊。我们也必须有继续前进下去的理由才行，就像先祖们决定跨过临界层的时候一样，不断前进，没有理由也没有鞭策。前进就是一切，这才是希灵意志！ ——珊多拉 《希灵帝国》', url='http://www.juzimi.com/ju/590321', pic='http://file.juzimi.com/weibopic/juzamu4.jpg'}
+SentenceImageText{text='谁见过风呢 我和你也没见过 但当树叶颤动 就知风吹过 ——宫崎骏 《起风了》', desc='谁见过风呢 我和你也没见过 但当树叶颤动 就知风吹过 ——宫崎骏 《起风了》', url='http://www.juzimi.com/ju/1552425', pic='http://file.juzimi.com/weibopic/jezxmi7.jpg'}
+SentenceImageText{text='用一首歌的旋律， 回忆某个曾经。  用一首歌的旋律， 倾诉一段光阴。  用一首歌的旋律， 忘掉所有道理。  用一首歌的旋律， 感激过去敬启。  用一首歌的旋律， 把爱恨都看分明。  用一首歌的旋律， 擦掉悲伤的泪滴。  用一首歌的旋律， 祈祷爱情会降临。  用一首歌的旋律， 改变明天和自己。', desc='用一首歌的旋律， 回忆某个曾经。  用一首歌的旋律， 倾诉一段光阴。  用一首歌的旋律， 忘掉所有道理。  用一首歌的旋律， 感激过去敬启。  用一首歌的旋律， 把爱恨都看分明。  用一首歌的旋律， 擦掉悲伤的泪滴。  用一首歌的旋律， 祈祷爱情会降临。  用一首歌的旋律， 改变明天和自己。', url='http://www.juzimi.com/ju/804502', pic='http://file.juzimi.com/weibopic/jrzamp5.jpg'}
+SentenceImageText{text='我曾经默默无语地，毫无指望地爱过你。 ——普希金 《我曾经爱过你》', desc='我曾经默默无语地，毫无指望地爱过你。 ——普希金 《我曾经爱过你》', url='http://www.juzimi.com/ju/609566', pic='http://file.juzimi.com/weibopic/jlzrmp4.jpg'}
+SentenceImageText{text='切忌太美丽，太美丽有罪，快乐太易碎。 ——@黄伟文 《美丽有罪》', desc='切忌太美丽，太美丽有罪，快乐太易碎。 ——黄伟文 《美丽有罪》', url='http://www.juzimi.com/ju/16680', pic='http://file.juzimi.com/weibopic/jizimi3.jpg'}
+SentenceImageText{text='从这个世界上消失，一个DNA都不要留下，顺便抹去别人对你的记忆。 《银魂》', desc='从这个世界上消失，一个DNA都不要留下，顺便抹去别人对你的记忆。 《银魂》', url='http://www.juzimi.com/ju/132666', pic='http://file.juzimi.com/weibopic/jizxmr4.jpg'}
+SentenceImageText{text='黑暗无边 与你并肩 ——@郭敬明 《小时代》', desc='黑暗无边 与你并肩 ——郭敬明 《小时代》', url='http://www.juzimi.com/ju/189412', pic='http://file.juzimi.com/weibopic/jozrmi6.jpg'}
+SentenceImageText{text='“以前答应了一个人，等她等到三十岁，结果三十岁一过，可以结婚，却单身单习惯了。” ——@唐七公子 《岁月是朵两生花》', desc='“以前答应了一个人，等她等到三十岁，结果三十岁一过，可以结婚，却单身单习惯了。” ——唐七公子 《岁月是朵两生花》', url='http://www.juzimi.com/ju/172645', pic='http://file.juzimi.com/weibopic/jpzrmx4.jpg'}
+SentenceImageText{text='好像有什么美好的东西，正逐渐从我生命中剥离，残忍的清晰的近乎窒息的痛苦，绝望的挽留却毫无用处。', desc='好像有什么美好的东西，正逐渐从我生命中剥离，残忍的清晰的近乎窒息的痛苦，绝望的挽留却毫无用处。', url='http://www.juzimi.com/ju/889122', pic='http://file.juzimi.com/weibopic/jizamu5.jpg'}
+SentenceImageText{text='遗忘有一把竖琴，记忆用它弹奏无声的忧伤。 你的童年是小村庄，可是，你走不出它的边际，无论你远行到何方。 ——@阿多尼斯 《我的孤独是一座花园》', desc='遗忘有一把竖琴，记忆用它弹奏无声的忧伤。 你的童年是小村庄，可是，你走不出它的边际，无论你远行到何方。 ——阿多尼斯 《我的孤独是一座花园》', url='http://www.juzimi.com/ju/403093', pic='http://file.juzimi.com/weibopic/jdzemo3.jpg'}
+SentenceImageText{text='众里嫣然通一顾,人间颜色如尘土。 ——@王国维 《人间词》', desc='众里嫣然通一顾,人间颜色如尘土。 ——王国维 《人间词》', url='http://www.juzimi.com/ju/672157', pic='http://file.juzimi.com/weibopic/jpzpml7.jpg'}
+
+```
+
 ##51妹子
 
 ###51妹子-最新-妹子列表

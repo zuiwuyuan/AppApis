@@ -59,4 +59,16 @@ public class SentenceCollection {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    @Override
+    public String toString() {
+        return "SentenceCollection{" +
+                "title='" + title + '\'' +
+                ", desc='" + desc + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", detailUrl='" + detailUrl + '\'' +
+                ", username='" + username + '\'' +
+                ", count='" + count + '\'' +
+                '}';
+    }
 }

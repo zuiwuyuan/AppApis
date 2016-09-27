@@ -50,4 +50,15 @@ public class SentenceSimple {
     public void setDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
     }
+
+    @Override
+    public String toString() {
+        return "SentenceSimple{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", detailUrl='" + detailUrl + '\'' +
+                ", source_num='" + source_num + '\'' +
+                '}';
+    }
 }

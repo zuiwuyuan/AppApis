@@ -36,7 +36,7 @@ public class SentenceActivity extends AppCompatActivity {
         String url = JuziApi.ALLARTICLE_JINGDIANTAICI + page;
 
         JuziUtil juziUtil = new JuziUtil();
-        juziUtil.getMemorableQuotes(url);
+        juziUtil.getMemorableQuotes(this, url);
     }
 
     /**
@@ -53,8 +53,7 @@ public class SentenceActivity extends AppCompatActivity {
         String url = JuziApi.ORIGINAL_JU + page;
 
         JuziUtil juziUtil = new JuziUtil();
-        juziUtil.getAllarticleCollectList(url);
-
+        juziUtil.getAllarticleCollectList(this, url);
     }
 
     /**
@@ -68,7 +67,7 @@ public class SentenceActivity extends AppCompatActivity {
         final String url = JuziApi.ALBUMS + page;
 
         JuziUtil juziUtil = new JuziUtil();
-        juziUtil.getJuziCollection(url);
+        juziUtil.getJuziCollection(this,url);
     }
 
     /**
@@ -82,7 +81,7 @@ public class SentenceActivity extends AppCompatActivity {
         final String url = JuziApi.NEWALBUMS + page;
 
         JuziUtil juziUtil = new JuziUtil();
-        juziUtil.getJuziCollection(url);
+        juziUtil.getJuziCollection(this, url);
     }
 
     /**
@@ -96,7 +95,7 @@ public class SentenceActivity extends AppCompatActivity {
         final String url = JuziApi.MEITUMEIJU + page;
 
         JuziUtil juziUtil = new JuziUtil();
-        juziUtil.getSentenceImgText(url);
+        juziUtil.getSentenceImgText(this, url);
 
     }
 }

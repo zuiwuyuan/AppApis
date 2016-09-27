@@ -1,7 +1,11 @@
 package com.lnyp.api.juzi;
 
+import android.content.Context;
+import android.content.Intent;
+
 import com.apkfuns.logutils.LogUtils;
 import com.google.gson.Gson;
+import com.lnyp.api.ui.ShowActivity;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,7 +26,7 @@ public class JuziUtil {
      *
      * @param url
      */
-    public void getMemorableQuotes(final String url) {
+    public void getMemorableQuotes(final Context mContext, final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -80,7 +84,8 @@ public class JuziUtil {
                             if (xqagepawirdescs != null && xqagepawirdescs.size() > 0) {
                                 Element xqagepawirdesc = xqagepawirdescs.get(0);
                                 if (xqagepawirdesc != null) {
-                                    String content = xqagepawirdesc.text().replaceAll(" ", "\n");
+//                                    String content = xqagepawirdesc.text().replaceAll(" ", "\n");
+                                    String content = xqagepawirdesc.text();
                                     sentenceSimple.setContent(content);
                                 }
                             }
@@ -98,6 +103,17 @@ public class JuziUtil {
                             LogUtils.e(sentenceSimple);
                             sentenceSimples.add(sentenceSimple);
                         }
+
+                        StringBuffer sb = new StringBuffer();
+                        for (int i = 0; i < sentenceSimples.size(); i++) {
+                            String data = sentenceSimples.get(i).toString();
+                            sb.append(data).append("\n");
+                        }
+
+                        Intent intent = new Intent(mContext, ShowActivity.class);
+                        intent.putExtra("data", sb.toString());
+                        mContext.startActivity(intent);
+
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -113,7 +129,7 @@ public class JuziUtil {
      *
      * @param url
      */
-    public void getAllarticleCollectList(final String url) {
+    public void getAllarticleCollectList(final Context mContext, final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -139,7 +155,9 @@ public class JuziUtil {
                             Elements xlistjus = field_content.getElementsByClass("xlistju");
                             if (xlistjus != null && xlistjus.size() > 0) {
 
-                                String conent = xlistjus.get(0).text().replaceAll(" ", "\n");
+                                String conent = xlistjus.get(0).text();
+//                                String conent = xlistjus.get(0).text().replaceAll(" ", "\n");
+
                                 sentenceDetail.setContent(conent);
 
                                 sentenceDetails.add(sentenceDetail);
@@ -148,6 +166,16 @@ public class JuziUtil {
                             }
                         }
                     }
+
+                    StringBuffer sb = new StringBuffer();
+                    for (int i = 0; i < sentenceDetails.size(); i++) {
+                        String data = sentenceDetails.get(i).toString();
+                        sb.append(data).append("\n");
+                    }
+
+                    Intent intent = new Intent(mContext, ShowActivity.class);
+                    intent.putExtra("data", sb.toString());
+                    mContext.startActivity(intent);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -162,7 +190,7 @@ public class JuziUtil {
      *
      * @param url
      */
-    public void getJuziCollection(final String url) {
+    public void getJuziCollection(final Context mContext, final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -259,6 +287,16 @@ public class JuziUtil {
                         }
                     }
 
+                    StringBuffer sb = new StringBuffer();
+                    for (int i = 0; i < sentenceCollections.size(); i++) {
+                        String data = sentenceCollections.get(i).toString();
+                        sb.append(data).append("\n");
+                    }
+
+                    Intent intent = new Intent(mContext, ShowActivity.class);
+                    intent.putExtra("data", sb.toString());
+                    mContext.startActivity(intent);
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -272,7 +310,7 @@ public class JuziUtil {
      *
      * @param url
      */
-    public void getSentenceImgText(final String url) {
+    public void getSentenceImgText(final Context mContext,final String url) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -308,6 +346,17 @@ public class JuziUtil {
                             }
                         }
                     }
+
+                    StringBuffer sb = new StringBuffer();
+                    for (int i = 0; i < sentenceImageTexts.size(); i++) {
+                        String data = sentenceImageTexts.get(i).toString();
+                        sb.append(data).append("\n");
+                    }
+
+                    Intent intent = new Intent(mContext, ShowActivity.class);
+                    intent.putExtra("data", sb.toString());
+                    mContext.startActivity(intent);
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
