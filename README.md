@@ -28,6 +28,7 @@ MeiziDetail{tag=null, imgBeans=[ImageBean{detailUrl='http://www.51xw.net/meizi/3
 ##捧腹网
 
 ###捧腹网-最新笑话
+```
 JokeBean{userName='我擦，不能让老板知道我就是那个傻 逼！', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/793/9764793.jpg', tags=[], dataBean=DataBean{content='去买鞋，看到鞋架上放着一双和我脚上一模一样的鞋标注五 折！问老板：这鞋怎么降价这么快，我前几天买鞋时都不打 折？ 老板郁闷的说：这两只鞋，一只37一只38，不知道那个傻 逼拿错鞋也不知道回来换换！ 心里一惊，偷偷的喵了一眼脚下的鞋号……我擦，不能让老板知道我就是那个傻 逼！', showImg='null', gifsrcImg='null', width='null', height='null'}}
 JokeBean{userName='女友太邪恶了，吃个豆浆都这么污...', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/794/9764794.jpg', tags=[每日图宴, 奇葩, 无节操, 邪恶内涵], dataBean=DataBean{content='null', showImg='http://image4.pengfu.cn/origin/160927/57e9ee662d573.jpg', gifsrcImg='', width='454', height='451'}}
 JokeBean{userName='有创意的美容广告', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/975/5104975.jpg', tags=[碉堡, 亮了, 惊呆, 城会玩], dataBean=DataBean{content='null', showImg='http://image4.pengfu.cn/origin/160927/57e9b9c5b3e54.jpg', gifsrcImg='', width='490', height='601'}}
@@ -38,8 +39,9 @@ JokeBean{userName='啥都来不及说了，快跑', lastTime='2016-09-27', userA
 JokeBean{userName='幸福来得太突然', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/707/6518707.jpg', tags=[动态图, 亮了, 新纪元, 无节操], dataBean=DataBean{content='null', showImg='http://image5.pengfu.cn/thumb/160927/57e9b12d193db.jpg', gifsrcImg='http://image5.pengfu.cn/origin/160927/57e9b12d193db.gif', width='360', height='244'}}
 JokeBean{userName='连续锻炼365天的照片并做成动态图', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/975/5104975.jpg', tags=[动态图, 碉堡, 新纪元, 吐槽], dataBean=DataBean{content='null', showImg='http://image4.pengfu.cn/thumb/160927/57e9bf58af54f.jpg', gifsrcImg='http://image4.pengfu.cn/origin/160927/57e9bf58af54f.gif', width='150', height='353'}}
 JokeBean{userName='乖乖叼好', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/336/9762336.jpg', tags=[动态图, 萌宠, 汪星人, 亮了], dataBean=DataBean{content='null', showImg='http://image5.pengfu.cn/thumb/160927/57e9b6829b51a.jpg', gifsrcImg='http://image5.pengfu.cn/origin/160927/57e9b6829b51a.gif', width='212', height='212'}}
-
+```
 ###捧腹网-捧腹段子
+```
 JokeBean{userName='我擦，不能让老板知道我就是那个傻 逼！', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/793/9764793.jpg', tags=[], dataBean=DataBean{content='去买鞋，看到鞋架上放着一双和我脚上一模一样的鞋标注五 折！问老板：这鞋怎么降价这么快，我前几天买鞋时都不打 折？ 老板郁闷的说：这两只鞋，一只37一只38，不知道那个傻 逼拿错鞋也不知道回来换换！ 心里一惊，偷偷的喵了一眼脚下的鞋号……我擦，不能让老板知道我就是那个傻 逼！', showImg='null', gifsrcImg='null', width='null', height='null'}}
 JokeBean{userName='老师这是误会！', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/793/9764793.jpg', tags=[], dataBean=DataBean{content='老师这是误会！肯定是误会啊！ 快睡觉的时候和床下的同学打闹，谁知道这时班主任来查房了，正巧我骑在那同学的身上，而且我只穿一条小裤衩。老师你别误会，只是打闹不是搞基("▔㉨▔)汗', showImg='null', gifsrcImg='null', width='null', height='null'}}
 JokeBean{userName='我爸爸的弟弟...', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/793/9764793.jpg', tags=[], dataBean=DataBean{content='今天跟单位女同事去吃酒席，都知道的，随礼要送份子钱，她叔叔让她带送一份，背景交代完毕—— 记账的时候， 她说 ：这份是我叔叔的， 对方问：你叔叔是谁？ 她回答：就是我叔叔啊； 对方：我问你叔叔是哪个 ？ 就是我爸爸的弟弟啊……… 苍天啊，我发誓，我真的不认识她………', showImg='null', gifsrcImg='null', width='null', height='null'}}
@@ -50,8 +52,9 @@ JokeBean{userName='一气之下就把手机摔了……', lastTime='2016-09-27',
 JokeBean{userName='滚犊子，明天别来了！', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/331/9765331.jpg', tags=[], dataBean=DataBean{content='老师问学生：牛贵，还是鸡贵？ 抢答：鸡贵。 老师：为什么？ 小明：九牛才一毛，鸡八毛。 老师：滚出去… 生物课上老师又说：狼和狗杂交的叫狼狗，老虎和狮子呢。 小明又抢答：叫老狮 老师马上吼道：滚犊子，明天别来了！……', showImg='null', gifsrcImg='null', width='null', height='null'}}
 JokeBean{userName='看来我只能去旅馆了！', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/793/9764793.jpg', tags=[], dataBean=DataBean{content='当年初中时一次晚自习，一同学不但迟到了，而且还趴在桌上睡大觉。老师叫醒他后说：要睡回家睡去！ 他却说：我就是因为在家睡觉，才被我爸赶到学校的，你现在却要让我回家，看来我只能去旅馆了！ 说完背着书包就走了。', showImg='null', gifsrcImg='null', width='null', height='null'}}
 JokeBean{userName='她会吃香蕉呀？', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/793/9764793.jpg', tags=[], dataBean=DataBean{content='今天朋友发给我一张她8个多月大女儿的照片，照片中小宝宝手拿着吃了一半的香蕉，撇着嘴在哭。我很惊奇地问朋友，“她会吃香蕉呀？”朋友回答：“是啊。”我又问：“那她为什么哭得这么伤心？”朋友的回答把我笑喷了：“穿得太厚了，她胳膊又短，吃了一半够不着了。”', showImg='null', gifsrcImg='null', width='null', height='null'}}
-
+```
 ###捧腹网-捧腹图片
+```
 JokeBean{userName='都不好意思看你们在干神马', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/794/9764794.jpg', tags=[每日图宴, 亮了, 惊呆], dataBean=DataBean{content='null', showImg='http://image1.pengfu.cn/origin/160927/57e9eeae599c2.jpg', gifsrcImg='', width='426', height='453'}}
 JokeBean{userName='让我怎么吐槽呢？来个神回复吧！', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/794/9764794.jpg', tags=[每日图宴, 神回复, 亮了, 吐槽], dataBean=DataBean{content='null', showImg='http://image1.pengfu.cn/origin/160927/57e9ee8ca3d07.jpg', gifsrcImg='', width='410', height='298'}}
 JokeBean{userName='女友太邪恶了，吃个豆浆都这么污...', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/794/9764794.jpg', tags=[每日图宴, 奇葩, 无节操, 邪恶内涵], dataBean=DataBean{content='null', showImg='http://image4.pengfu.cn/origin/160927/57e9ee662d573.jpg', gifsrcImg='', width='454', height='451'}}
@@ -72,8 +75,9 @@ JokeBean{userName='男人一旦火了。。。。。。', lastTime='2016-09-27',
 JokeBean{userName='连续锻炼365天的照片并做成动态图', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/975/5104975.jpg', tags=[动态图, 碉堡, 新纪元, 吐槽], dataBean=DataBean{content='null', showImg='http://image4.pengfu.cn/thumb/160927/57e9bf58af54f.jpg', gifsrcImg='http://image4.pengfu.cn/origin/160927/57e9bf58af54f.gif', width='150', height='353'}}
 JokeBean{userName='好大的风，把我假牙都吹掉了', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/975/5104975.jpg', tags=[悲剧, 动态图, 雷人囧事, 糗大了], dataBean=DataBean{content='null', showImg='http://image5.pengfu.cn/thumb/160927/57e9be9b73c72.jpg', gifsrcImg='http://image5.pengfu.cn/origin/160927/57e9be9b73c72.gif', width='280', height='166'}}
 JokeBean{userName='动物中的损友', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/975/5104975.jpg', tags=[动态图, 亮了, 新纪元, 吐槽], dataBean=DataBean{content='null', showImg='http://image4.pengfu.cn/thumb/160927/57e9be82c5e57.jpg', gifsrcImg='http://image4.pengfu.cn/origin/160927/57e9be82c5e57.gif', width='245', height='200'}}
-
+```
 ###捧腹网-神回复
+```
 JokeBean{userName='有创意的美容广告', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/975/5104975.jpg', tags=[碉堡, 亮了, 惊呆, 城会玩], dataBean=DataBean{content='null', showImg='http://image4.pengfu.cn/origin/160927/57e9b9c5b3e54.jpg', gifsrcImg='', width='490', height='601'}}
 JokeBean{userName='熊猫夫妇亲热被偷窥狂打断', lastTime='2016-09-27', userAvatar='http://avatar.pengfu.cn/small/358/2041358.jpg', tags=[动态图, 亮了, 新纪元, 吐槽], dataBean=DataBean{content='null', showImg='http://image3.pengfu.cn/thumb/160927/57e9bc889795e.jpg', gifsrcImg='http://image3.pengfu.cn/origin/160927/57e9bc889795e.gif', width='400', height='225'}}
 JokeBean{userName='发生在货运电梯里的爱情故事', lastTime='2016-09-26', userAvatar='http://avatar.pengfu.cn/small/358/2041358.jpg', tags=[动态图, 涨姿势, 惊呆], dataBean=DataBean{content='null', showImg='http://image3.pengfu.cn/thumb/160926/57e86d77d844b.jpg', gifsrcImg='http://image3.pengfu.cn/origin/160926/57e86d77d844b.gif', width='242', height='175'}}
@@ -84,12 +88,12 @@ JokeBean{userName='主人有话好好说!!!', lastTime='2016-09-26', userAvatar=
 JokeBean{userName='画面太震撼……差点吓得叫出来了', lastTime='2016-09-26', userAvatar='http://avatar.pengfu.cn/small/791/9764791.jpg', tags=[动态图, 碉堡, 新纪元], dataBean=DataBean{content='null', showImg='http://image1.pengfu.cn/thumb/160926/57e87b9696248.jpg', gifsrcImg='http://image1.pengfu.cn/origin/160926/57e87b9696248.gif', width='275', height='500'}}
 JokeBean{userName='这次真猜不出来，大家帮忙猜猜', lastTime='2016-09-26', userAvatar='http://avatar.pengfu.cn/small/791/9764791.jpg', tags=[亮了, 新纪元, 奇葩, 城会玩], dataBean=DataBean{content='null', showImg='http://image2.pengfu.cn/origin/160926/57e87b09c95a1.jpg', gifsrcImg='', width='510', height='594'}}
 JokeBean{userName='天下武功 无坚不摧 唯快不破！', lastTime='2016-09-26', userAvatar='http://avatar.pengfu.cn/small/794/9764794.jpg', tags=[动态图, 小正太, 熊孩子, 城会玩], dataBean=DataBean{content='null', showImg='http://image1.pengfu.cn/thumb/160926/57e879aa662d7.jpg', gifsrcImg='http://image1.pengfu.cn/origin/160926/57e879aa662d7.gif', width='300', height='196'}}
-
+```
 
 
 ##51贴图
 ###51贴图-首页
-
+```
 <!-- Banner -->
 TieTuBannerBean{imgUrl='http://img2.51tietu.net/upload/20160802/20160802015625ycAv5.jpg', detailUrl='http://www.51tietu.net/tag/%E5%A5%B3%E7%94%9F/'}
 TieTuBannerBean{imgUrl='http://img2.51tietu.net/upload/20160802/20160802013921r6xwb.jpg', detailUrl='http://www.51tietu.net/tag/%E6%AF%95%E4%B8%9A/'}
@@ -145,9 +149,9 @@ TieTuHomeListBean{title='', imgUrl='http://img2.51tietu.net/upload/thumb/2016092
 TieTuHomeListBean{title='', imgUrl='http://img2.51tietu.net/upload/thumb/20160926/201606191517043b2nwuwvbzw50280x180.jpg', detailUrl='http://m.51tietu.net/weitu/42098.html'}
 TieTuHomeListBean{title='', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160619151705ac3fx4c2prt54280x180.jpg', detailUrl='http://m.51tietu.net/weitu/42080.html'}
 TieTuHomeListBean{title='', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160619151656rbsriacwxbl14280x180.jpg', detailUrl='http://m.51tietu.net/weitu/42066.html'}
-
+```
 ###51贴图-根据类型查看图片列表
-
+```
 TieTuListBean{title='鲜花唯美意境非主流QQ空', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160718222628o1utikutlil280x180.jpg', detailUrl='http://m.51tietu.net/tp/42929.html'}
 TieTuListBean{title='女生图片素材唯美伤感背影', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160718225727gi3hjujs3ik280x180.jpg', detailUrl='http://m.51tietu.net/tp/42919.html'}
 TieTuListBean{title='情侣非主流图片唯美有意境', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160718233443arqp2rtr00p280x180.jpg', detailUrl='http://m.51tietu.net/tp/42906.html'}
@@ -164,8 +168,9 @@ TieTuListBean{title='漫少女、卡哇伊', imgUrl='http://img2.51tietu.net/upl
 TieTuListBean{title='2016唯美带字图片伤感', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160718224241cbltwqfjpjc280x180.jpg', detailUrl='http://m.51tietu.net/tp/42778.html'}
 TieTuListBean{title='山林唯美风景清新意境美图', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160719001753xnzavw5h50l280x180.jpg', detailUrl='http://m.51tietu.net/tp/42767.html'}
 TieTuListBean{title='繁华都市夜幕下唯美背景图', imgUrl='http://img2.51tietu.net/upload/thumb/20160927/20160718215745pyvuyjovtf3280x180.jpg', detailUrl='http://m.51tietu.net/tp/42755.html'}
-
+```
 ###51贴图-根据类型查看图片详情
+```
 TieTuDetailBean{imgUrl='http://img2.51tietu.net/upload/www.51tietu.net/2016-061915/20160619151702oz4ylljf2fv39.jpg', desc='null'}
 TieTuDetailBean{imgUrl='null', desc=''}
 TieTuDetailBean{imgUrl='null', desc='文｜封寒紫'}
@@ -225,6 +230,6 @@ TieTuDetailBean{imgUrl='null', desc='我们永远不会对彼此心生厌烦，�
 TieTuDetailBean{imgUrl='null', desc='作者：封寒紫，在北方努力生长的南方姑娘，偶尔言情，偶尔鸡汤。微信公众号：有个酒馆 (ID:yougejiuguan)。本文由晚安少年（v_night）首发。'}
 TieTuDetailBean{imgUrl='null', desc='唯美一句：用一分钟离开，用一辈子去忘记。'}
 TieTuDetailBean{imgUrl='null', desc='唯美一句：或许所有人都没有发现她其实是恨的，又或许只是当做没有发现，毕竟她失去了所有。'}
-
+```
 
 如果对你有帮助，请star下吧，谢谢。
