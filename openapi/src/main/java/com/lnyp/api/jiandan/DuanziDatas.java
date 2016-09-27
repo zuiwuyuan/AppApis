@@ -8,4 +8,12 @@ public class DuanziDatas {
     public String current_comment_page;
 
     public List<DuanziBean> duanziBeanList;
+
+    @Override
+    public String toString() {
+        return "DuanziDatas{" +
+                "current_comment_page='" + current_comment_page + '\'' +
+                ", duanziBeanList=" + duanziBeanList +
+                '}';
+    }
 }

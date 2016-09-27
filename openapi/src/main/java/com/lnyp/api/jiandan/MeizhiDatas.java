@@ -10,4 +10,13 @@ public class MeizhiDatas {
     public String current_comment_page;
 
     public List<MeizhiBean> meizhiBeanList;
+
+
+    @Override
+    public String toString() {
+        return "MeizhiDatas{" +
+                "current_comment_page='" + current_comment_page + '\'' +
+                ", meizhiBeanList=" + meizhiBeanList +
+                '}';
+    }
 }

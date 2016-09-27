@@ -10,4 +10,12 @@ public class QutuDatas {
     public String current_comment_page;
 
     public List<QutuBean> jianDanQutuBeenList;
+
+    @Override
+    public String toString() {
+        return "QutuDatas{" +
+                "current_comment_page='" + current_comment_page + '\'' +
+                ", jianDanQutuBeenList=" + jianDanQutuBeenList +
+                '}';
+    }
 }

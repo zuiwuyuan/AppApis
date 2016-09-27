@@ -9,4 +9,13 @@ public class MeizhiBean {
     public String author;
     public String lastUpdateTime;
     public List<String> imgs;
+
+    @Override
+    public String toString() {
+        return "MeizhiBean{" +
+                "author='" + author + '\'' +
+                ", lastUpdateTime='" + lastUpdateTime + '\'' +
+                ", imgs=" + imgs +
+                '}';
+    }
 }

@@ -5,6 +5,109 @@
 通过UserAgent判断智能手机(设备,Android,IOS)
 http://free0007.iteye.com/blog/2017329/
 
+##煎蛋网
+
+###煎蛋网-新鲜事列表
+```
+FreshNewsBean{title='内向的人为什么学习更快', detailUrl='http://i.jandan.net/2016/07/27/introverts-learn-faster.html', imgUrl='http://tankr.net/s/custom/QZDJ.jpg', keyWords='熊猫丹 / 心理学'}
+FreshNewsBean{title='饭来张口：智能喂食机器人', detailUrl='http://i.jandan.net/2016/07/27/obi-robot.html', imgUrl='http://tankr.net/s/custom/FAEI.jpg', keyWords='熊猫丹 / 人工智能'}
+FreshNewsBean{title='如何应对儿童噩梦与夜惊', detailUrl='http://i.jandan.net/2016/07/27/nightmares-night-terrors.html', imgUrl='http://tankr.net/s/custom/ISTT.jpg', keyWords='新江湖一点黑 / 走进科学'}
+FreshNewsBean{title='煎蛋小学堂：我们该寻找和接触外星人吗？', detailUrl='http://i.jandan.net/2016/07/27/extraterrestrial-life-2.html', imgUrl='http://tankr.net/s/custom/RV2U.jpg', keyWords='小脑袋 / 小学堂'}
+FreshNewsBean{title='萨摩亚人：我胖，我忍耐，我征服', detailUrl='http://i.jandan.net/2016/07/27/powerful-obesity-gene.html', imgUrl='http://tankr.net/s/custom/VHAA.jpg', keyWords='肌肉桃 / 走进科学'}
+FreshNewsBean{title='乌鸦，鸟界的福尔摩斯', detailUrl='http://i.jandan.net/2016/07/27/crows-investigate.html', imgUrl='http://tankr.net/s/custom/AMU3.jpg', keyWords='肌肉桃 / 走进科学'}
+FreshNewsBean{title='不应被遗忘的壮举：“阳光动力”2号环球飞行', detailUrl='http://i.jandan.net/2016/07/27/solar-impulse-2-2.html', imgUrl='http://tankr.net/s/custom/T3MX.jpg', keyWords='小鱼儿 / 高科技'}
+FreshNewsBean{title='留意屎尿颜色，可知有疾无疾', detailUrl='http://i.jandan.net/2016/07/27/pee-poo-color.html', imgUrl='http://tankr.net/s/custom/XMCH.jpg', keyWords='新江湖一点黑 / 健康'}
+FreshNewsBean{title='UKNOWHAT：蜘蛛是没有屌的', detailUrl='http://i.jandan.net/2016/07/27/you-know-what.html', imgUrl='http://tankr.net/s/custom/XQ2C.jpg', keyWords='金星 / 冷新闻'}
+FreshNewsBean{title='斯诺登设计了一款「反监视」手机壳', detailUrl='http://i.jandan.net/2016/07/27/phone-case.html', imgUrl='http://tankr.net/s/custom/G064.jpg', keyWords='许叔 / 数码产品'}
+FreshNewsBean{title='韩国士兵减压新方式——跳芭蕾', detailUrl='http://i.jandan.net/2016/07/27/soldiers-take-ballet.html', imgUrl='http://tankr.net/s/custom/ZUE6.jpg', keyWords='island / 冷新闻'}
+FreshNewsBean{title='避孕套放哪儿好', detailUrl='http://i.jandan.net/2016/07/27/never-mind.html', imgUrl='http://tankr.net/s/custom/3ATP.jpg', keyWords='Macondo / SEX'}
+FreshNewsBean{title='7种值得一试的啪啪啪姿势[NSFW]', detailUrl='http://i.jandan.net/2016/07/27/useless-knowledge.html', imgUrl='http://tankr.net/s/custom/GB7Y.jpg', keyWords='Rare / SEX'}
+FreshNewsBean{title='美国法官：比特币不是钱，怎么用咱不管', detailUrl='http://i.jandan.net/2016/07/27/bitcoin-not-money.html', imgUrl='http://tankr.net/s/custom/V0U1.jpg', keyWords='肌肉桃 / Tech'}
+FreshNewsBean{title='Luca：这货就是所有地球生命的祖先？', detailUrl='http://i.jandan.net/2016/07/27/luca-photo.html', imgUrl='http://tankr.net/s/custom/7ZZ5.jpg', keyWords='许叔 / 走进科学'}
+FreshNewsBean{title='无聊图大吐槽【40P】', detailUrl='http://i.jandan.net/2016/07/27/hahaha-8-4.html', imgUrl='http://tankr.net/s/custom/MULD.jpg', keyWords='金星 / 大吐槽'}
+
+```
+
+###煎蛋网-新鲜事详情
+```
+FreshNewsDetail{type=1, desc='null', imgSmall='//tankr.net/s/small/4E6U.jpg', imgMedium='//tankr.net/s/medium/4E6U.jpg'}
+FreshNewsDetail{type=2, desc='机器人工程师们开始越来越多地从自然中获取设计灵感，比如蟑螂，鳗鱼，蝾螈，蜘蛛和黄貂鱼。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='哈佛大学的科学家们把目光转向可地球上最聪明的生物之一，章鱼，并将其独特的能力转化到机器人设计上。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='这个自供电，有八只手臂的装置是一个完全柔软的机器人。设计者说这一特征可以让它比其他刚性材料更加适应自然环境。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=1, desc='null', imgSmall='//tankr.net/s/small/3SBU.jpg', imgMedium='//tankr.net/s/medium/3SBU.jpg'}
+FreshNewsDetail{type=2, desc='「机械章鱼」由体内的化学燃料提供电力，一种过氧化氢水溶液。当它穿过含有铂基催化剂的反应室时，化学燃料就会分解，产生增压氧气，然后用作伸展章鱼手臂里的充气隔室，从而可以移动。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='[link]', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='“控制系统大约分成四部分：上游(液体燃料储存)，振荡器(液体燃料调节)，反应室(分解为增压气体)和下游(气体驱动与通气分配)，”论文中解释到。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='组建机器人用到了一系列技术，包括了3D打印气动网络。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='过去，软体机器人一直受到局限，因为必须装上坚硬的电池。自带液体燃料的能力则打破了这一限制。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='研究作者，哈佛大学保尔森工程与应用科学学院博士生Ryan Truby谈到了这项技术的应用前景：', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='“软体机器人还处在萌芽时期。这一系统的的前景令人兴奋，尤其是人机接口方面，比如可穿戴和生物医学技术。因为这些机器人系统是建立在诸如硅胶之类的软体材料上，它们比传统机器人更安全，而且也更加适合这方面的应用。此外，软体机器人也可以使用在传统机器人无法应用的环境里，比如水下作业。”', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=1, desc='null', imgSmall='//tankr.net/s/small/I4QA9NC7.jpg', imgMedium='//tankr.net/s/medium/I4QA9NC7.jpg'}
+FreshNewsDetail{type=2, desc='Jennifer Lewis和她同事们的研究已经发表在《自然》上，其中写道「机械章鱼」目前可以运行4到8分钟，但是这个运行时间会随着设计和部件制造的改进变得更加持久。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='“我们的综合设计和快速加工方法是我们可以在该架构里对不同材料进行可编程组装，从而为完全柔软的自主式机器人打下了基础，”研究者写到。', imgSmall='null', imgMedium='null'}
+FreshNewsDetail{type=2, desc='[许叔 via cosmosmagazine]', imgSmall='null', imgMedium='null'}
+
+```
+
+
+###煎蛋网-段子列表
+```
+DuanziBean{author='ayaoayaoaya', lastUpdateTime='59 mins ago', content='天上的星星不说话，地上的三星会爆炸。手上的Note7炸呀炸，辛苦的钱啊都白花。啊～啊啊～啊～啊啊啊啊～夜夜想起库克的话，三星的Note7会爆炸……'}
+DuanziBean{author='光消失的地方', lastUpdateTime='2 hours ago', content='Windows系统有两个骗局，一个是接上新硬件时通过Windows
+Update查找驱动，从来没有成功过；另一个是进入不了系统时，系统会进入recovery，妄图进行自身修复，也从来没成功过。'}
+DuanziBean{author='朕是皇阿玛', lastUpdateTime='3 hours ago', content='好人不长命，因为天堂也缺好人。'}
+DuanziBean{author='jimmyf1984', lastUpdateTime='3 hours ago', content='近期把妹名句：「要不要来我家抓神奇宝贝。」
+真是一语双关又带有情色与娱乐意味。
+——Twitter.
+ryo6.'}
+DuanziBean{author='Utopia', lastUpdateTime='3 hours ago', content='“只要我努力就能找到女朋友吗？”
+“对啊，只要你努力就能找到像你一样差的女朋友。”'}
+DuanziBean{author='天才', lastUpdateTime='3 hours ago', content='【光消失的地方】是不是跟煎蛋签约了？？？'}
+DuanziBean{author='Onenicex', lastUpdateTime='4 hours ago', content='“我x，你们背着我有群了。”'}
+DuanziBean{author='liweim', lastUpdateTime='4 hours ago', content='每次听到“只睡五个小时地辛苦创业…”时，我就特别想问，你拉了多少人入坑，他们又都在哪？'}
+DuanziBean{author='Jack酱', lastUpdateTime='4 hours ago', content='2016小小说：《来》
+夜黑风高，荒山野岭。小木屋里。
+男：“来了？”
+女：“来了。”
+男:“没来吧？”
+女:“没来。”
+男：“来？”
+女：“来。”
+男：“来了没？‘’
+女：“还没来。”
+男：“还没来？”
+女：“来了。”
+女：“还来不？”
+男：“不来了，来不了了。”'}
+DuanziBean{author='HolyC', lastUpdateTime='4 hours ago', content='腰疼谁给我揉揉
+说:
+女生削铅笔时不小用把手划出个口子，喜欢她的男生见状，立即拿过女生手中的铅笔刀，把自己的手也割出一道口子。
+女生问他：“你这是做什么?”
+男生深情凝视女生说：“你看，这样一来我们就是两口子了。”
+半个月后，男孩因为染上破伤风杆菌死了。'}
+DuanziBean{author='Zzz', lastUpdateTime='5 hours ago', content='昨天刷微博，看到一个比较红的博主发了两张超载鸡，评论里面居然很少知道那是什么，很多人在问哪里有卖？蛋友还真是比想象中的少'}
+DuanziBean{author='老和', lastUpdateTime='5 hours ago', content='饿得睡不着，数羊。一只，两只……32串，33串……'}
+
+```
+
+###煎蛋网-妹子图列表
+```
+MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww1.sinaimg.cn/large/66b3de17gw1f7wva5yw4aj20m80xcn52.jpg]}
+MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww3.sinaimg.cn/large/66b3de17gw1f7wva555hjj20np0zkdja.jpg]}
+MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww2.sinaimg.cn/large/66b3de17gw1f7wva4szsfj20r213ktj4.jpg]}
+MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww2.sinaimg.cn/large/66b3de17gw1f7wva33h14j20g40lgtak.jpg]}
+MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww4.sinaimg.cn/large/66b3de17gw1f7wva2ool5j20k00u0jtf.jpg]}
+MeizhiBean{author='小宝', lastUpdateTime='4 hours ago', imgs=[http://ww3.sinaimg.cn/large/66b3de17gw1f7wva2b4dwj20ld0sgn0k.jpg]}
+
+```
+
+
+###煎蛋网-无聊图列表
+```
+QutuBean{author='食品级怪蜀黍', lastUpdateTime='34 mins ago', imgs=[http://ww2.sinaimg.cn/large/537d92b0jw1f8831xcph0j20jg0dt402.jpg]}
+
+```
+
 ##句子迷
 
 ###句子迷-名人名句-电影台词列表

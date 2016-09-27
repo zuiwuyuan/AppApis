@@ -1,9 +1,12 @@
 package com.lnyp.api.jiandan;
 
+import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 
 import com.apkfuns.logutils.LogUtils;
 import com.lnyp.api.http.HttpUtils;
+import com.lnyp.api.ui.ShowActivity;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -19,13 +22,14 @@ import java.util.List;
  */
 public class JianDanUtil {
 
-    public void getNewThings(final String date) {
+    public void getNewThings(final Context mContext, final String date) {
 
         new Thread(new Runnable() {
             @Override
             public void run() {
 
                 String url = JiandanApi.NEW_THINGS + date;
+
                 System.out.println(url);
 
                 try {
@@ -53,6 +57,16 @@ public class JianDanUtil {
                         freshNewsBeen.add(freshNewsBean);
                     }
 
+                    StringBuffer sb = new StringBuffer();
+                    for (int i = 0; i < freshNewsBeen.size(); i++) {
+                        String data = freshNewsBeen.get(i).toString();
+                        sb.append(data).append("\n");
+                    }
+
+                    Intent intent = new Intent(mContext, ShowActivity.class);
+                    intent.putExtra("data", sb.toString());
+                    mContext.startActivity(intent);
+
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -62,7 +76,7 @@ public class JianDanUtil {
 
     }
 
-    public void getNewThingDetail(final String url) {
+    public void getNewThingDetail(final Context mContext, final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -116,6 +130,15 @@ public class JianDanUtil {
                         freshNewsDetails.add(freshNewsDetail);
                     }
 
+                    StringBuffer sb = new StringBuffer();
+                    for (int i = 0; i < freshNewsDetails.size(); i++) {
+                        String data = freshNewsDetails.get(i).toString();
+                        sb.append(data).append("\n");
+                    }
+
+                    Intent intent = new Intent(mContext, ShowActivity.class);
+                    intent.putExtra("data", sb.toString());
+                    mContext.startActivity(intent);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -128,7 +151,7 @@ public class JianDanUtil {
     /**
      * @param url
      */
-    public void getDuans(final String url) {
+    public void getDuans(final Context mContext, final String url) {
 
         HttpUtils.doGetAsyn(url, new HttpUtils.CallBack() {
             @Override
@@ -188,12 +211,21 @@ public class JianDanUtil {
                 }
                 duanziDatas.duanziBeanList = duanziBeanList;
 
+                StringBuffer sb = new StringBuffer();
+                for (int i = 0; i < duanziBeanList.size(); i++) {
+                    String data = duanziBeanList.get(i).toString();
+                    sb.append(data).append("\n");
+                }
+
+                Intent intent = new Intent(mContext, ShowActivity.class);
+                intent.putExtra("data", sb.toString());
+                mContext.startActivity(intent);
             }
         });
 
     }
 
-    public void getMeizis(final String url) {
+    public void getMeizis(final Context mContext, final String url) {
         HttpUtils.doGetAsyn(url, new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
@@ -264,11 +296,21 @@ public class JianDanUtil {
                         meizhiDatas.meizhiBeanList = meizhiBeanList;
                     }
                 }
+
+                StringBuffer sb = new StringBuffer();
+                for (int i = 0; i < meizhiDatas.meizhiBeanList.size(); i++) {
+                    String data = meizhiDatas.meizhiBeanList.get(i).toString();
+                    sb.append(data).append("\n");
+                }
+
+                Intent intent = new Intent(mContext, ShowActivity.class);
+                intent.putExtra("data", sb.toString());
+                mContext.startActivity(intent);
             }
         });
     }
 
-    public void getQutus(final String url) {
+    public void getQutus(final Context mContext, final String url) {
         HttpUtils.doGetAsyn(url, new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
@@ -334,6 +376,16 @@ public class JianDanUtil {
                         qutuDatas.jianDanQutuBeenList = jianDanQutuBeenList;
                     }
                 }
+
+                StringBuffer sb = new StringBuffer();
+                for (int i = 0; i < qutuDatas.jianDanQutuBeenList.size(); i++) {
+                    String data = qutuDatas.jianDanQutuBeenList.get(i).toString();
+                    sb.append(data).append("\n");
+                }
+
+                Intent intent = new Intent(mContext, ShowActivity.class);
+                intent.putExtra("data", sb.toString());
+                mContext.startActivity(intent);
             }
         });
     }

@@ -38,7 +38,7 @@ public class JianDanActivity extends AppCompatActivity {
 
         String date = simpleDateFormat.format(now);
 
-        jianDanUtil.getNewThings(date);
+        jianDanUtil.getNewThings(this, date);
     }
 
     /**
@@ -54,7 +54,7 @@ public class JianDanActivity extends AppCompatActivity {
 
         JianDanUtil jianDanUtil = new JianDanUtil();
 
-        jianDanUtil.getNewThingDetail(url);
+        jianDanUtil.getNewThingDetail(this, url);
 
     }
 
@@ -71,7 +71,7 @@ public class JianDanActivity extends AppCompatActivity {
         final String url = JiandanApi.DUANZI;
 
         JianDanUtil jianDanUtil = new JianDanUtil();
-        jianDanUtil.getDuans(url);
+        jianDanUtil.getDuans(this, url);
     }
 
     /**
@@ -87,7 +87,7 @@ public class JianDanActivity extends AppCompatActivity {
         final String url = JiandanApi.OOXX;
 
         JianDanUtil jianDanUtil = new JianDanUtil();
-        jianDanUtil.getMeizis(url);
+        jianDanUtil.getMeizis(this, url);
     }
 
     /**
@@ -103,7 +103,7 @@ public class JianDanActivity extends AppCompatActivity {
         final String url = JiandanApi.PIC;
 
         JianDanUtil jianDanUtil = new JianDanUtil();
-        jianDanUtil.getQutus(url);
+        jianDanUtil.getQutus(this, url);
 
     }
 }
